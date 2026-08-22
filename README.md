@@ -54,6 +54,10 @@ A request with no payment gets HTTP `402` with the payment requirements (amount,
 a signed `X-PAYMENT` header; a facilitator verifies and settles the USDC
 transfer, and the request succeeds. No signup, no API key, no stored card.
 
+## Examples
+
+See [`examples/`](./examples): [curl](./examples/curl.sh), [Python client](./examples/python_client.py), and [MCP client](./examples/mcp-client.md).
+
 ## Endpoints
 
 | Endpoint | Purpose |
