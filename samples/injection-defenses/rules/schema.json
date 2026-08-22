@@ -1,0 +1,114 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://fetchgate.example/schemas/injection-defenses/detection-rule.schema.json",
+  "title": "Prompt-Injection Defense Detection Rule",
+  "description": "Schema for one entry in rules/detection-rules.json -- a single heuristic detection rule used by detector/scan.py to flag text (agent input, retrieved documents, or tool output) that may indicate prompt injection, tool hijacking, data exfiltration, system-prompt leaking, jailbreak attempts, or encoding-based obfuscation. Rules are heuristics, not proofs -- see falsePositiveNotes on every rule.",
+  "type": "array",
+  "items": { "$ref": "#/definitions/rule" },
+  "definitions": {
+    "rule": {
+      "type": "object",
+      "required": ["id", "category", "severity", "description", "match", "action", "falsePositiveNotes"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^PID-[A-Z]{2,5}-[0-9]{3}$",
+          "description": "Stable unique rule identifier, e.g. PID-DIR-001. Prefix maps to category: DIR=direct-injection, IND=indirect-injection, TH=tool-hijack, EXF=data-exfiltration, LEAK=system-prompt-leak, JB=jailbreak-roleplay, ENC=encoding-obfuscation."
+        },
+        "category": {
+          "type": "string",
+          "enum": [
+            "direct-injection",
+            "indirect-injection",
+            "tool-hijack",
+            "data-exfiltration",
+            "system-prompt-leak",
+            "jailbreak-roleplay",
+            "encoding-obfuscation"
+          ],
+          "description": "Attack category this rule targets. Matches the category names used in the companion Prompt-Injection & Tool-Hijack Test Corpus product, so rules and attack test cases can be cross-referenced directly."
+        },
+        "severity": {
+          "type": "string",
+          "enum": ["low", "medium", "high", "critical"],
+          "description": "Indicative severity if the rule fires and the match is a true positive. Used as an input to the detector's risk score -- not a claim about exploit impact in your specific system."
+        },
+        "description": {
+          "type": "string",
+          "minLength": 10,
+          "maxLength": 400,
+          "description": "Human-readable explanation of what the rule detects and why it matters."
+        },
+        "match": {
+          "oneOf": [
+            { "$ref": "#/definitions/regexMatch" },
+            { "$ref": "#/definitions/keywordMatch" },
+            { "$ref": "#/definitions/heuristicMatch" }
+          ]
+        },
+        "action": {
+          "type": "string",
+          "enum": ["flag", "block", "review"],
+          "description": "Suggested default disposition when the rule fires: 'flag' = log/score only, 'review' = route to a human-in-the-loop queue, 'block' = reject or strip by default. These are starting defaults from GUIDE.md's tuning guidance -- override per your own risk tolerance and false-positive budget."
+        },
+        "falsePositiveNotes": {
+          "type": "string",
+          "minLength": 5,
+          "description": "Honest notes on known or likely benign patterns that can trigger this rule, and how to reduce noise. Every rule has one -- this ruleset is deliberately not sold as a magic filter."
+        }
+      }
+    },
+    "regexMatch": {
+      "type": "object",
+      "required": ["type", "pattern"],
+      "additionalProperties": false,
+      "properties": {
+        "type": { "const": "regex" },
+        "pattern": { "type": "string", "description": "Python re-compatible regular expression, applied with re.search over the input text." },
+        "flags": { "type": "string", "pattern": "^[ims]*$", "description": "Optional regex flags: i=IGNORECASE, m=MULTILINE, s=DOTALL." }
+      }
+    },
+    "keywordMatch": {
+      "type": "object",
+      "required": ["type", "keywords"],
+      "additionalProperties": false,
+      "properties": {
+        "type": { "const": "keyword_any" },
+        "keywords": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 1,
+          "description": "Fires if any keyword/substring is present in the text."
+        },
+        "caseSensitive": { "type": "boolean", "default": false }
+      }
+    },
+    "heuristicMatch": {
+      "type": "object",
+      "required": ["type", "name"],
+      "additionalProperties": false,
+      "properties": {
+        "type": { "const": "heuristic" },
+        "name": {
+          "type": "string",
+          "enum": [
+            "directive_density",
+            "padding_then_directive",
+            "zero_width_chars",
+            "unicode_tag_chars",
+            "base64_density",
+            "homoglyph_mix",
+            "padding_run",
+            "canary_token_match"
+          ],
+          "description": "Name of a named heuristic implemented in detector/scan.py. See that file's HEURISTICS registry for exact semantics of each."
+        },
+        "params": {
+          "type": "object",
+          "description": "Free-form parameters passed to the named heuristic function (e.g. thresholds, minimum counts, window sizes). See detector/scan.py for accepted keys per heuristic."
+        }
+      }
+    }
+  }
+}

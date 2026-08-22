@@ -1,0 +1,112 @@
+{
+  "_sample_note": "FREE SAMPLE -- 5 of 21 facilitators from the full x402 Services & Facilitator Registry. Entries copied verbatim from the paid product. Full registry (21 facilitators + 118 services): https://growthchief5.gumroad.com/l/x402-registry",
+  "edition": "2026-08-21",
+  "collectedOn": "2026-08-21",
+  "source": "Aggregated from facilitators.x402.watch (built on the community @swader/x402facilitators list), the x402 GitHub org and ecosystem docs, and prior Fetchgate research (research/x402.md).",
+  "count": 5,
+  "countInFullProduct": 21,
+  "facilitators": [
+    {
+      "id": "coinbase-cdp",
+      "name": "Coinbase CDP Facilitator",
+      "apiUrl": "https://facilitator.cdp.coinbase.com",
+      "onchainAddress": null,
+      "chains": [
+        "Base",
+        "Solana"
+      ],
+      "stablecoins": [
+        "USDC"
+      ],
+      "feeModel": "$0.001 per settled payment after the first 1,000 free settlements per month, effective 2026-01-01 (first bills went out 2026-02-01). Listed as \"0% fee\" on facilitators.x402.watch, which appears to track markup/percentage fee rather than this flat per-settlement charge.",
+      "kycCustodyNotes": "Runs KYT/OFAC screening on transactions it processes; non-custodial in that settled USDC lands directly in the seller's own wallet address rather than a Coinbase-controlled account.",
+      "addressesListed": 11,
+      "status": "active",
+      "sourceUrl": [
+        "https://facilitators.x402.watch/",
+        "https://www.kucoin.com/news/flash/coinbase-x402-facilitator-to-charge-0-001-per-settlement-starting-january-2026",
+        "https://docs.cdp.coinbase.com/x402/core-concepts/facilitator"
+      ],
+      "notes": "The reference/default facilitator most tooling and docs point to.",
+      "dateVerified": "2026-08-21"
+    },
+    {
+      "id": "polygon-facilitator",
+      "name": "Polygon Facilitator",
+      "apiUrl": "https://x402.polygon.technology",
+      "onchainAddress": null,
+      "chains": [
+        "Polygon"
+      ],
+      "stablecoins": null,
+      "feeModel": "0% (per facilitators.x402.watch listing)",
+      "kycCustodyNotes": null,
+      "addressesListed": 24,
+      "status": "active",
+      "sourceUrl": [
+        "https://facilitators.x402.watch/"
+      ],
+      "notes": "Stablecoin support not itemized by source; not independently confirmed for this facilitator.",
+      "dateVerified": "2026-08-21"
+    },
+    {
+      "id": "payai",
+      "name": "PayAI",
+      "apiUrl": "https://facilitator.payai.network",
+      "onchainAddress": null,
+      "chains": [
+        "Solana",
+        "Base"
+      ],
+      "stablecoins": null,
+      "feeModel": "0% (per facilitators.x402.watch listing)",
+      "kycCustodyNotes": null,
+      "addressesListed": 6,
+      "status": "active",
+      "sourceUrl": [
+        "https://facilitators.x402.watch/"
+      ],
+      "notes": null,
+      "dateVerified": "2026-08-21"
+    },
+    {
+      "id": "thirdweb",
+      "name": "Thirdweb",
+      "apiUrl": "https://api.thirdweb.com/v1/payments/x402",
+      "onchainAddress": null,
+      "chains": [
+        "Base",
+        "Polygon"
+      ],
+      "stablecoins": null,
+      "feeModel": "Listed as gated + paid tier on facilitators.x402.watch (not a flat 0%); part of Thirdweb's broader paid developer platform.",
+      "kycCustodyNotes": null,
+      "addressesListed": null,
+      "status": "gated+paid",
+      "sourceUrl": [
+        "https://facilitators.x402.watch/"
+      ],
+      "notes": null,
+      "dateVerified": "2026-08-21"
+    },
+    {
+      "id": "corbits",
+      "name": "Corbits",
+      "apiUrl": "https://facilitator.corbits.dev",
+      "onchainAddress": null,
+      "chains": [
+        "Solana"
+      ],
+      "stablecoins": null,
+      "feeModel": "0% (per facilitators.x402.watch listing)",
+      "kycCustodyNotes": null,
+      "addressesListed": 1,
+      "status": "active",
+      "sourceUrl": [
+        "https://facilitators.x402.watch/"
+      ],
+      "notes": null,
+      "dateVerified": "2026-08-21"
+    }
+  ]
+}

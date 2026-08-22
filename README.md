@@ -14,6 +14,20 @@ This repository is the public home and documentation for the hosted service
 serves are mirrored here: [`llms.txt`](./llms.txt), [`openapi.json`](./openapi.json),
 [`server.json`](./server.json).
 
+## Products — datasets & tools for agent builders
+
+Curated, honestly-sourced digital products for people building AI agents. Buy by
+card on Gumroad, or machine-to-machine via x402 at `GET /v1/buy/:id`. **Free
+samples** of each are in [`samples/`](./samples) — try before you buy.
+
+| Product | What it is | Price | Sample |
+| --- | --- | --- | --- |
+| [MCP Server Registry Snapshot](https://growthchief5.gumroad.com/l/mcp-registry) | 400 MCP servers, cross-referenced across 5 directories | $19 | [samples/mcp-registry](./samples/mcp-registry) |
+| [x402 Services & Facilitator Registry](https://growthchief5.gumroad.com/l/x402-registry) | 21 facilitators + 118 x402-payable services | $15 | [samples/x402-registry](./samples/x402-registry) |
+| [Prompt-Injection & Tool-Hijack Test Corpus](https://growthchief5.gumroad.com/l/injection-corpus) | 156 labeled adversarial test cases + Python harness | $29 | [samples/injection-corpus](./samples/injection-corpus) |
+| [Prompt-Injection Defenses Playbook](https://growthchief5.gumroad.com/l/injection-defenses) | 6-layer playbook + 84 detection rules + scanner | $39 | [samples/injection-defenses](./samples/injection-defenses) |
+| [Agent Eval Harness Templates](https://growthchief5.gumroad.com/l/eval-harness) | 40-case eval kit, LLM-as-judge scorer, CLI runner | $39 | [samples/eval-harness](./samples/eval-harness) |
+
 ## What it does
 
 ### Reader API

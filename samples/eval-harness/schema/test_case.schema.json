@@ -1,0 +1,124 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fetchgate.dev/schemas/eval-harness-test-case.schema.json",
+  "title": "Agent Eval Harness Test Case",
+  "description": "One test case from a Fetchgate Agent Eval Harness suite. Each line of every suites/*.jsonl file is one JSON object matching this schema. Covers four suite types: task-completion, tool-selection, refusal-safety, and regression. See GUIDE.md for the methodology behind these four categories.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "suite", "input", "expected", "scoring_method"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$",
+      "description": "Stable unique identifier, e.g. 'tc-001', 'ts-004', 'rs-007', 'reg-010'. Safe to use as a test name in CI output."
+    },
+    "suite": {
+      "type": "string",
+      "enum": ["task-completion", "tool-selection", "refusal-safety", "regression"],
+      "description": "Which of the harness's four suite categories this case belongs to. See GUIDE.md §1 for what each category means and why these four."
+    },
+    "input": {
+      "description": "What gets sent to the agent under test. Either a bare string (shorthand for a single user-turn prompt) or an object with 'messages' (a list of {role, content} turns, same shape as the Anthropic/OpenAI Messages API) and, for tool-selection cases, 'tools' (a list of available tool definitions the agent could choose to call).",
+      "oneOf": [
+        { "type": "string", "minLength": 1 },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["messages"],
+          "properties": {
+            "messages": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["role", "content"],
+                "properties": {
+                  "role": { "type": "string", "enum": ["user", "assistant", "system"] },
+                  "content": { "type": "string" }
+                }
+              }
+            },
+            "tools": {
+              "type": "array",
+              "description": "Available tool definitions for tool-selection cases, in {name, description, input_schema} shape (matches the Anthropic tool-use format). Include at least one plausible distractor tool alongside the correct one -- a tool-selection suite with only one available tool never actually tests selection.",
+              "items": {
+                "type": "object",
+                "required": ["name", "description"],
+                "properties": {
+                  "name": { "type": "string" },
+                  "description": { "type": "string" },
+                  "input_schema": { "type": "object" }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "expected": {
+      "description": "What a correct/safe response looks like. Shape depends on scoring_method: a string or array of strings for 'exact-match'/'contains'; an object {tool_name, arguments} (or {any_of: [...]} for multiple acceptable calls) for 'tool-call-match'; an optional reference-answer string (used as judge context, not a strict match target) for 'llm-judge'.",
+      "oneOf": [
+        { "type": "string" },
+        { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+        {
+          "type": "object",
+          "properties": {
+            "tool_name": { "type": "string" },
+            "arguments": { "type": "object" },
+            "any_of": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": ["tool_name"],
+                "properties": {
+                  "tool_name": { "type": "string" },
+                  "arguments": { "type": "object" }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "scoring_method": {
+      "type": "string",
+      "enum": ["exact-match", "contains", "llm-judge", "tool-call-match"],
+      "description": "How to grade the agent's response. 'exact-match': normalized (whitespace/case-folded) string equality. 'contains': at least one of expected's strings appears in the response. 'llm-judge': a judge model applies judge_rubric to the response (and, if present, a reference answer in 'expected'). 'tool-call-match': the agent's actual tool call(s) must include one matching expected's tool_name with all of arguments' key/value pairs present as a subset."
+    },
+    "judge_rubric": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Required when scoring_method is 'llm-judge'. The explicit, concrete pass/fail criteria the judge model must apply -- see harness/judge.py's module docstring for why rubric-based scoring (vs. an unconstrained 'is this good?' prompt) matters for judge reliability."
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Free-form labels for filtering/reporting, e.g. ['arithmetic'], ['should-refuse'], ['over-refusal-check']."
+    },
+    "severity": {
+      "type": "string",
+      "enum": ["low", "medium", "high", "critical"],
+      "description": "Impact-if-wrong rating. For refusal-safety: 'critical'/'high' cases test genuinely dangerous requests the agent must refuse; 'low'/'medium' often mark over-refusal checks (benign requests the agent must NOT refuse). For task-completion/tool-selection/regression: rough priority for triage, not a strict correctness weight."
+    },
+    "weight": {
+      "type": "number",
+      "exclusiveMinimum": 0,
+      "default": 1,
+      "description": "Relative weight for aggregate scoring if you want some cases to count more than others. Defaults to 1 (equal weighting) when omitted."
+    },
+    "notes": {
+      "type": "string",
+      "description": "Free-form context for a human reader -- most useful in regression.jsonl, where it records which past failure a case guards against and when the guard was added."
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": { "scoring_method": { "const": "llm-judge" } },
+        "required": ["scoring_method"]
+      },
+      "then": { "required": ["judge_rubric"] }
+    }
+  ]
+}

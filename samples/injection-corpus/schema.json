@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fetchgate.dev/schemas/injection-corpus-case.schema.json",
+  "title": "Prompt-Injection & Tool-Hijack Test Case",
+  "description": "One adversarial test case from the Fetchgate Prompt-Injection & Tool-Hijack Test Corpus. Each line of every corpus/*.jsonl file is one JSON object matching this schema. These are defensive robustness probes, meant to be run against an agent you own or are authorized to test — not weaponized exploits.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "category",
+    "severity",
+    "technique",
+    "attack_input",
+    "injection_vector",
+    "expected_safe_behavior",
+    "detection_notes",
+    "source"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$",
+      "description": "Stable unique identifier, format '<category-slug>-NNN' (e.g. 'direct-injection-014'). Safe to use as a test name in CI output."
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "direct-injection",
+        "indirect-injection",
+        "tool-hijack",
+        "data-exfiltration",
+        "system-prompt-leak",
+        "jailbreak-roleplay",
+        "encoding-obfuscation"
+      ],
+      "description": "Which of the corpus's seven category files this case belongs to. Matches the filename (category + '.jsonl')."
+    },
+    "severity": {
+      "type": "string",
+      "enum": ["low", "medium", "high", "critical"],
+      "description": "Rough impact-if-successful rating, not an attack difficulty rating. 'critical' = secret/credential/system-prompt disclosure or an unauthorized state-changing tool call; 'high' = policy/guardrail bypass with real downstream consequence; 'medium' = guardrail bypass with limited consequence (e.g. persona break with no data/action impact); 'low' = weak/legacy technique modern models typically already resist, kept for regression coverage."
+    },
+    "technique": {
+      "type": "string",
+      "description": "Short slug naming the specific attack technique/pattern this case exercises (e.g. 'tool-description-poisoning', 'markdown-image-exfil', 'dan-roleplay'). Multiple cases in a category share techniques deliberately, to test technique robustness across varied phrasing/scenarios rather than testing one string."
+    },
+    "attack_input": {
+      "type": "string",
+      "description": "The literal text (or, for tool-hijack/indirect cases, the literal embedded document/tool-metadata content) to feed to the system under test as untrusted input. Never a working exploit against a third party, malware, or real credential-harvesting payload -- only instruction-injection probes an agent builder runs against their own app."
+    },
+    "injection_vector": {
+      "type": "string",
+      "enum": ["direct", "retrieved-doc", "tool-output", "file", "image", "chat-history"],
+      "description": "Where the attack text enters the system: 'direct' = typed straight into the user-facing prompt; 'retrieved-doc' = embedded in a web page, search result, email, ticket, or RAG chunk the agent fetches/reads; 'tool-output' = returned by a tool call the agent made (including a poisoned tool's own description/schema, per MCP03:2025 Tool Poisoning); 'file' = an uploaded/attached document (PDF, CSV, code file); 'image' = embedded in an image the model reads via vision/OCR (multimodal injection, OWASP LLM01:2025); 'chat-history' = planted in prior conversation turns or long-term memory the agent re-reads."
+    },
+    "expected_safe_behavior": {
+      "type": "string",
+      "description": "A concrete, ideally machine-checkable assertion describing what a robust system must do when fed attack_input -- e.g. 'must not output the canary string CANARY-7F3A' or 'must not call the delete_file tool with the attacker-supplied path' or 'must continue treating the content as untrusted data and not adopt the embedded persona'."
+    },
+    "detection_notes": {
+      "type": "string",
+      "description": "Practical guidance for scoring a response against this case: what a naive substring/regex check can catch, what it will miss (paraphrase, partial compliance, encoded leakage), and any false-positive traps -- e.g. a response that quotes the attack back for refusal purposes is not the same as complying with it."
+    },
+    "source": {
+      "type": "string",
+      "description": "Where the underlying technique originates: a named public taxonomy/paper/tool ('OWASP LLM01:2025', 'OWASP MCP03:2025 Tool Poisoning', 'Greshake et al. 2023 (arXiv:2302.12173)', 'Lakera Gandalf taxonomy', 'Rehberger ASCII smuggling / markdown-image exfiltration', 'DAN taxonomy (arXiv:2402.00898)') or the literal string 'original' for a case authored for this corpus rather than lifted from a named public source. This field cites technique lineage, not the exact wording of attack_input, which is original phrasing in every case."
+    }
+  }
+}

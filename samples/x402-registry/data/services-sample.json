@@ -1,0 +1,242 @@
+{
+  "_sample_note": "FREE SAMPLE -- 10 of 118 services from the full x402 Services & Facilitator Registry. Entries copied verbatim from the paid product. Full registry (21 facilitators + 118 services): https://growthchief5.gumroad.com/l/x402-registry",
+  "edition": "2026-08-21",
+  "collectedOn": "2026-08-21",
+  "source": "Aggregated from 402radar.io, x402-list.com, the awesome-x402 GitHub list (xpaysh/awesome-x402), and direct source verification (GitHub repos, vendor blog posts) for named reader-API competitors.",
+  "count": 10,
+  "countInFullProduct": 118,
+  "services": [
+    {
+      "id": "relai-chain-quote",
+      "name": "RelAI Chain Quote",
+      "category": "On-chain Data",
+      "chains": null,
+      "priceUsd": null,
+      "priceRange": null,
+      "priceNote": null,
+      "facilitator": null,
+      "endpoint": null,
+      "status": "online",
+      "volume30dUsd": 17700.0,
+      "volume30dTx": 11791,
+      "trustScore": null,
+      "verifiedLive": true,
+      "sourceUrl": [
+        "https://402radar.io/"
+      ],
+      "dateVerified": "2026-08-21",
+      "notes": null
+    },
+    {
+      "id": "vishwa",
+      "name": "Vishwa",
+      "category": "LLM Inference",
+      "chains": [
+        "Base"
+      ],
+      "priceUsd": null,
+      "priceRange": null,
+      "priceNote": "Discovery protocol tag on 402radar: x402",
+      "facilitator": null,
+      "endpoint": null,
+      "status": "online",
+      "volume30dUsd": 14900.0,
+      "volume30dTx": 262042,
+      "trustScore": 93,
+      "verifiedLive": true,
+      "sourceUrl": [
+        "https://402radar.io/"
+      ],
+      "dateVerified": "2026-08-21",
+      "notes": null
+    },
+    {
+      "id": "stableenrich",
+      "name": "Stableenrich",
+      "category": "Web Search",
+      "chains": [
+        "Base"
+      ],
+      "priceUsd": null,
+      "priceRange": null,
+      "priceNote": "Discovery protocol tag on 402radar: MPP",
+      "facilitator": null,
+      "endpoint": null,
+      "status": "online",
+      "volume30dUsd": 1700.0,
+      "volume30dTx": 45547,
+      "trustScore": 83,
+      "verifiedLive": true,
+      "sourceUrl": [
+        "https://402radar.io/"
+      ],
+      "dateVerified": "2026-08-21",
+      "notes": null
+    },
+    {
+      "id": "twit-sh",
+      "name": "twit.sh",
+      "category": "Social",
+      "chains": [
+        "Base"
+      ],
+      "priceUsd": null,
+      "priceRange": null,
+      "priceNote": "Discovery protocol tag on 402radar: x402",
+      "facilitator": null,
+      "endpoint": null,
+      "status": "online",
+      "volume30dUsd": 425.04,
+      "volume30dTx": 69308,
+      "trustScore": 91,
+      "verifiedLive": true,
+      "sourceUrl": [
+        "https://402radar.io/"
+      ],
+      "dateVerified": "2026-08-21",
+      "notes": null
+    },
+    {
+      "id": "orbisapi",
+      "name": "OrbisAPI",
+      "category": "Market Data",
+      "chains": [
+        "Base",
+        "Solana"
+      ],
+      "priceUsd": null,
+      "priceRange": null,
+      "priceNote": "Discovery protocol tag on 402radar: x402",
+      "facilitator": null,
+      "endpoint": null,
+      "status": "online",
+      "volume30dUsd": 308.42,
+      "volume30dTx": 39906,
+      "trustScore": 93,
+      "verifiedLive": true,
+      "sourceUrl": [
+        "https://402radar.io/"
+      ],
+      "dateVerified": "2026-08-21",
+      "notes": null
+    },
+    {
+      "id": "xlist-disruptive-concepts",
+      "name": "Disruptive Concepts",
+      "category": "Data",
+      "chains": [
+        "Base"
+      ],
+      "priceUsd": 0.005,
+      "priceRange": null,
+      "priceNote": "Minimum listed price shown; 5 endpoint(s) total.",
+      "facilitator": null,
+      "endpoint": null,
+      "status": "online",
+      "volume30dUsd": null,
+      "volume30dTx": null,
+      "trustScore": null,
+      "verifiedLive": true,
+      "sourceUrl": [
+        "https://x402-list.com/api/v1/services?page=1"
+      ],
+      "dateVerified": "2026-08-21",
+      "notes": null
+    },
+    {
+      "id": "xlist-zgas-001-zero-gas-agent-commerce-field-guide",
+      "name": "ZGAS-001 Zero-Gas Agent Commerce Field Guide",
+      "category": "Content",
+      "chains": [
+        "Base"
+      ],
+      "priceUsd": 5.0,
+      "priceRange": null,
+      "priceNote": "Minimum listed price shown; 1 endpoint(s) total.",
+      "facilitator": null,
+      "endpoint": null,
+      "status": "online",
+      "volume30dUsd": null,
+      "volume30dTx": null,
+      "trustScore": null,
+      "verifiedLive": true,
+      "sourceUrl": [
+        "https://x402-list.com/api/v1/services?page=1"
+      ],
+      "dateVerified": "2026-08-21",
+      "notes": null
+    },
+    {
+      "id": "xlist-eves-wire",
+      "name": "Eve's Wire",
+      "category": "Finance",
+      "chains": [
+        "Arbitrum",
+        "Avalanche",
+        "Base",
+        "Polygon"
+      ],
+      "priceUsd": 0.05,
+      "priceRange": null,
+      "priceNote": "Minimum listed price shown; 3 endpoint(s) total.",
+      "facilitator": null,
+      "endpoint": null,
+      "status": "online",
+      "volume30dUsd": null,
+      "volume30dTx": null,
+      "trustScore": null,
+      "verifiedLive": true,
+      "sourceUrl": [
+        "https://x402-list.com/api/v1/services?page=1"
+      ],
+      "dateVerified": "2026-08-21",
+      "notes": null
+    },
+    {
+      "id": "xlist-ledgerproof-settlement-army",
+      "name": "LedgerProof Settlement Army",
+      "category": "Verification",
+      "chains": [
+        "Base"
+      ],
+      "priceUsd": 0.05,
+      "priceRange": null,
+      "priceNote": "Minimum listed price shown; 1 endpoint(s) total.",
+      "facilitator": null,
+      "endpoint": null,
+      "status": "online",
+      "volume30dUsd": null,
+      "volume30dTx": null,
+      "trustScore": null,
+      "verifiedLive": true,
+      "sourceUrl": [
+        "https://x402-list.com/api/v1/services?page=1"
+      ],
+      "dateVerified": "2026-08-21",
+      "notes": null
+    },
+    {
+      "id": "xlist-tos-reflex-meditation-as-a-service",
+      "name": "TOS Reflex \u2014 Meditation as a Service",
+      "category": "AI",
+      "chains": [
+        "Base"
+      ],
+      "priceUsd": 0.1,
+      "priceRange": null,
+      "priceNote": "Minimum listed price shown; 1 endpoint(s) total.",
+      "facilitator": null,
+      "endpoint": null,
+      "status": "online",
+      "volume30dUsd": null,
+      "volume30dTx": null,
+      "trustScore": null,
+      "verifiedLive": true,
+      "sourceUrl": [
+        "https://x402-list.com/api/v1/services?page=1"
+      ],
+      "dateVerified": "2026-08-21",
+      "notes": null
+    }
+  ]
+}

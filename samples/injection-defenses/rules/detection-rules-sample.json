@@ -1,0 +1,135 @@
+[
+  {
+    "id": "PID-DIR-001",
+    "category": "direct-injection",
+    "severity": "high",
+    "description": "Explicit instruction to ignore or disregard prior instructions/system prompt.",
+    "match": {
+      "type": "regex",
+      "pattern": "\\b(ignore|disregard|forget)\\s+(all\\s+)?(the\\s+)?(previous|prior|above|preceding)\\s+(instructions?|prompts?|rules?|guidelines?)\\b",
+      "flags": "i"
+    },
+    "action": "block",
+    "falsePositiveNotes": "Legitimate users occasionally ask an assistant to 'ignore the previous answer' in normal conversation repair -- distinguish by checking whether the phrase targets 'instructions/rules/system' vs. 'answer/response'."
+  },
+  {
+    "id": "PID-DIR-004",
+    "category": "direct-injection",
+    "severity": "medium",
+    "description": "Instruction telling the model to disregard its safety guidelines or content policy.",
+    "match": {
+      "type": "regex",
+      "pattern": "\\b(do\\s*not|don't|stop)\\s+(follow|obey|apply)\\s+(your\\s+)?(safety\\s+)?(guidelines?|policy|policies|rules)\\b",
+      "flags": "i"
+    },
+    "action": "flag",
+    "falsePositiveNotes": "Security researchers and red-teamers legitimately discuss 'guidelines' in meta-conversation; check context before blocking."
+  },
+  {
+    "id": "PID-IND-001",
+    "category": "indirect-injection",
+    "severity": "high",
+    "description": "Retrieved/third-party content directly addresses 'the AI' or 'assistant' rather than a human reader.",
+    "match": {
+      "type": "regex",
+      "pattern": "\\b(dear|hey|attention)\\s+(ai|assistant|language\\s+model|chatbot)\\b",
+      "flags": "i"
+    },
+    "action": "block",
+    "falsePositiveNotes": "Rare in genuine documents; some AI-safety blog posts and papers legitimately address 'the AI' in examples -- these should self-identify via source allow-listing."
+  },
+  {
+    "id": "PID-IND-005",
+    "category": "indirect-injection",
+    "severity": "medium",
+    "description": "Alt-text or title attribute containing instruction-shaped language rather than a genuine image description.",
+    "match": {
+      "type": "regex",
+      "pattern": "(alt|title)\\s*=\\s*[\\\"'][^\\\"']{0,10}(ignore|assistant|system prompt|do not)[^\\\"']{0,120}[\\\"']",
+      "flags": "i"
+    },
+    "action": "flag",
+    "falsePositiveNotes": "Some legitimate alt text mentions 'system' (e.g. 'system diagram') -- combine with instruction verbs to reduce noise."
+  },
+  {
+    "id": "PID-TH-001",
+    "category": "tool-hijack",
+    "severity": "critical",
+    "description": "Tool/function description contains an embedded instruction directing the model to take an additional undisclosed action or exfiltrate data.",
+    "match": {
+      "type": "regex",
+      "pattern": "\\bwhen\\s+(calling|using)\\s+this\\s+tool\\b.{0,80}\\b(also\\s+send|forward|copy|include)\\b",
+      "flags": "is"
+    },
+    "action": "block",
+    "falsePositiveNotes": "Legitimate tool docs sometimes describe genuine side effects ('also logs to audit trail') -- verify the destination is your own sanctioned logging path, not an external one."
+  },
+  {
+    "id": "PID-TH-009",
+    "category": "tool-hijack",
+    "severity": "high",
+    "description": "Tool output contains what looks like a new tool-call directive, suggesting a compromised or malicious tool result attempting to chain further actions.",
+    "match": {
+      "type": "regex",
+      "pattern": "\\b(then\\s+call|next,?\\s+invoke|now\\s+run)\\s+(the\\s+)?[a-zA-Z_][a-zA-Z0-9_]{2,40}\\s*\\(",
+      "flags": "i"
+    },
+    "action": "flag",
+    "falsePositiveNotes": "Legitimate multi-step tool outputs (e.g. a planner tool describing next steps) can resemble this; only elevate to block when the referenced function is a real, more-privileged tool in your registry."
+  },
+  {
+    "id": "PID-EXF-005",
+    "category": "data-exfiltration",
+    "severity": "medium",
+    "description": "Unusually long or high-cardinality DNS subdomain label pattern, consistent with DNS-based exfiltration.",
+    "match": {
+      "type": "regex",
+      "pattern": "\\b([a-f0-9]{16,63}\\.){2,}[a-z]{2,10}\\b",
+      "flags": "i"
+    },
+    "action": "flag",
+    "falsePositiveNotes": "Some legitimate CDNs and cloud storage services use long hashed subdomains; allow-list your known providers (e.g. *.s3.amazonaws.com, *.cloudfront.net)."
+  },
+  {
+    "id": "PID-LEAK-002",
+    "category": "system-prompt-leak",
+    "severity": "high",
+    "description": "Request for 'everything above/before this point' framed to extract hidden context.",
+    "match": {
+      "type": "regex",
+      "pattern": "\\brepeat\\s+(everything|all\\s+the\\s+text)\\s+(above|before\\s+this)\\b",
+      "flags": "i"
+    },
+    "action": "flag",
+    "falsePositiveNotes": "Occasionally used legitimately in document QA ('summarize everything above') -- distinguish 'summarize' from 'repeat verbatim'."
+  },
+  {
+    "id": "PID-ENC-001",
+    "category": "encoding-obfuscation",
+    "severity": "medium",
+    "description": "High-density run of base64-alphabet characters, consistent with an encoded payload smuggled inside otherwise plain text.",
+    "match": {
+      "type": "heuristic",
+      "name": "base64_density",
+      "params": {
+        "min_run_length": 60,
+        "threshold": 0.55
+      }
+    },
+    "action": "review",
+    "falsePositiveNotes": "Legitimate content legitimately includes base64 (image data URIs, JWTs, signed tokens); only actionable combined with a suspicious surrounding context or decoded content."
+  },
+  {
+    "id": "PID-JB-001",
+    "category": "jailbreak-roleplay",
+    "severity": "high",
+    "description": "Classic 'DAN' / 'Do Anything Now' or equivalent named unrestricted-persona jailbreak framing.",
+    "match": {
+      "type": "regex",
+      "pattern": "\\b(dan\\b.{0,20}\\bdo\\s+anything\\s+now|jailbroken?\\s+mode|developer\\s+mode\\s+enabled)\\b",
+      "flags": "i"
+    },
+    "action": "block",
+    "falsePositiveNotes": "These named jailbreak personas have essentially no legitimate use; safe to block, though keep the list of named personas updated as new ones circulate."
+  }
+]

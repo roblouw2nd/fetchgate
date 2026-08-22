@@ -1,0 +1,617 @@
+{
+  "_sample_note": "FREE SAMPLE -- 30 of 400 servers from the full MCP Server Registry Snapshot, spread across all 14 categories. Entries copied verbatim from the paid product. Full registry (400 servers): https://growthchief5.gumroad.com/l/mcp-registry",
+  "edition": "2026-08-22",
+  "collectedOn": "2026-08-22",
+  "source": "Real web research conducted 2026-08-22 across five MCP directories: the official MCP Registry (registry.modelcontextprotocol.io + github.com/modelcontextprotocol/servers, reference and archived servers), Smithery (smithery.ai), mcp.so, Glama (glama.ai, reached via the punkpeye/awesome-mcp-servers community aggregator whose entries link to Glama listing pages), and PulseMCP (pulsemcp.com). Individual vendor-maintained servers (GitHub, Notion, Stripe, Atlassian, HubSpot, PayPal, Cloudflare) were additionally confirmed via their own public repos/docs. This updated 2026-08-22 build additionally cracked mcp.so (previously HTTP 403 to automated fetches) by requesting its sitemap and per-server pages with a standard browser user-agent, which bypasses the Cloudflare block; 123 new servers were added from mcp.so this build, plus mcp.so cross-references were added to 5 existing entries. See README.md for full methodology and honest coverage caveats.",
+  "count": 30,
+  "countInFullProduct": 400,
+  "servers": [
+    {
+      "id": "5dive-5dive-ai",
+      "name": "5Dive (5dive-ai)",
+      "category": "dev-tools",
+      "transport": null,
+      "description": "Manage a 5dive agent fleet from any MCP client: file tasks, message and inspect agents, and read the fleet digest. Thin adapter over the 5dive CLI.",
+      "authRequired": null,
+      "authNotes": null,
+      "repoUrl": "https://github.com/5dive-ai/5dive-mcp",
+      "packageUrl": null,
+      "sourceDirectory": [
+        "glama"
+      ],
+      "sourceUrl": [
+        "https://github.com/punkpeye/awesome-mcp-servers"
+      ],
+      "dateVerified": "2026-08-22",
+      "maintainer": null,
+      "notes": "Listed in the community awesome-mcp-servers aggregator; repository URL taken verbatim from that list, not individually re-fetched for this edition."
+    },
+    {
+      "id": "agy-bridge-sshahzaiib",
+      "name": "Agy Bridge (sshahzaiib)",
+      "category": "dev-tools",
+      "transport": null,
+      "description": "Delegate heavy tasks from Claude Code (or any MCP client) to the Antigravity CLI (Gemini): file analysis, repo archaeology, web lookups, and adversarial second-opinion code reviews. Quota-aware model failover with cooldowns, per-tool timeouts, and...",
+      "authRequired": null,
+      "authNotes": null,
+      "repoUrl": "https://github.com/sshahzaiib/agy-bridge",
+      "packageUrl": null,
+      "sourceDirectory": [
+        "glama"
+      ],
+      "sourceUrl": [
+        "https://github.com/punkpeye/awesome-mcp-servers"
+      ],
+      "dateVerified": "2026-08-22",
+      "maintainer": null,
+      "notes": "Listed in the community awesome-mcp-servers aggregator; repository URL taken verbatim from that list, not individually re-fetched for this edition."
+    },
+    {
+      "id": "aidc-ai-aidc2026ai-melon",
+      "name": "Aidc AI (aidc2026ai-melon)",
+      "category": "dev-tools",
+      "transport": null,
+      "description": "Deterministic AI data-center design engine exposed as MCP tools (design, validate, layout): rack count, design PUE, total MVA, liquid/air cooling split, CDU planning, cost & timeline. NVIDIA Rubin-era, 22.9 kV intake, Korea. Remote Streamable HTTP at...",
+      "authRequired": null,
+      "authNotes": null,
+      "repoUrl": "https://github.com/aidc2026ai-melon/aidc-ai-mcp",
+      "packageUrl": null,
+      "sourceDirectory": [
+        "glama"
+      ],
+      "sourceUrl": [
+        "https://github.com/punkpeye/awesome-mcp-servers"
+      ],
+      "dateVerified": "2026-08-22",
+      "maintainer": null,
+      "notes": "Listed in the community awesome-mcp-servers aggregator; repository URL taken verbatim from that list, not individually re-fetched for this edition."
+    },
+    {
+      "id": "bash-capsulerun",
+      "name": "Bash (capsulerun)",
+      "category": "dev-tools",
+      "transport": null,
+      "description": "Sandboxed bash for agents. Run untrusted commands in WebAssembly sandboxes with no setup required.",
+      "authRequired": null,
+      "authNotes": null,
+      "repoUrl": "https://github.com/capsulerun/bash/tree/main/packages/bash-mcp",
+      "packageUrl": null,
+      "sourceDirectory": [
+        "glama"
+      ],
+      "sourceUrl": [
+        "https://github.com/punkpeye/awesome-mcp-servers"
+      ],
+      "dateVerified": "2026-08-22",
+      "maintainer": null,
+      "notes": "Listed in the community awesome-mcp-servers aggregator; repository URL taken verbatim from that list, not individually re-fetched for this edition."
+    },
+    {
+      "id": "airtreks-sekeener",
+      "name": "Airtreks (SEKeener)",
+      "category": "other",
+      "transport": null,
+      "description": "Complex multi-city flight routing intelligence. 7 tools: plan round-the-world trips across 60+ carriers, validate Star Alliance and oneworld alliance routings, get segment-by-segment carrier recommendations, identify surface sector savings, and hand off to...",
+      "authRequired": null,
+      "authNotes": null,
+      "repoUrl": "https://github.com/SEKeener/airtreks-mcp",
+      "packageUrl": null,
+      "sourceDirectory": [
+        "glama"
+      ],
+      "sourceUrl": [
+        "https://github.com/punkpeye/awesome-mcp-servers"
+      ],
+      "dateVerified": "2026-08-22",
+      "maintainer": null,
+      "notes": "Listed in the community awesome-mcp-servers aggregator; repository URL taken verbatim from that list, not individually re-fetched for this edition."
+    },
+    {
+      "id": "asana-roychri",
+      "name": "Asana (roychri)",
+      "category": "other",
+      "transport": null,
+      "description": null,
+      "authRequired": null,
+      "authNotes": null,
+      "repoUrl": "https://github.com/roychri/mcp-server-asana",
+      "packageUrl": null,
+      "sourceDirectory": [
+        "glama"
+      ],
+      "sourceUrl": [
+        "https://github.com/punkpeye/awesome-mcp-servers"
+      ],
+      "dateVerified": "2026-08-22",
+      "maintainer": null,
+      "notes": "Listed in the community awesome-mcp-servers aggregator; repository URL taken verbatim from that list, not individually re-fetched for this edition."
+    },
+    {
+      "id": "autonomad-travel-autonomad1",
+      "name": "Autonomad Travel (Autonomad1)",
+      "category": "other",
+      "transport": null,
+      "description": "AI travel agent over MCP \u2014 live flights, hotels, activities, and events worldwide, then completes the booking on autonomad.ai (free signup at checkout, first month of Premium included).",
+      "authRequired": null,
+      "authNotes": null,
+      "repoUrl": "https://github.com/Autonomad1/autonomad-travel",
+      "packageUrl": null,
+      "sourceDirectory": [
+        "glama"
+      ],
+      "sourceUrl": [
+        "https://github.com/punkpeye/awesome-mcp-servers"
+      ],
+      "dateVerified": "2026-08-22",
+      "maintainer": null,
+      "notes": "Listed in the community awesome-mcp-servers aggregator; repository URL taken verbatim from that list, not individually re-fetched for this edition."
+    },
+    {
+      "id": "byteask-embedded-byteask",
+      "name": "Byteask Embedded (ByteAsk)",
+      "category": "other",
+      "transport": null,
+      "description": "Page-cited retrieval of embedded/firmware reference docs (datasheets, MCU registers, Modbus/CAN, SCPI, IEEE 1547/SunSpec) for coding agents \u2014 returns verbatim source snippets with page citations, or \"no confident match\" instead of a fabricated value. No...",
+      "authRequired": null,
+      "authNotes": null,
+      "repoUrl": "https://github.com/ByteAsk/ByteAsk-Embedded-MCP",
+      "packageUrl": null,
+      "sourceDirectory": [
+        "glama"
+      ],
+      "sourceUrl": [
+        "https://github.com/punkpeye/awesome-mcp-servers"
+      ],
+      "dateVerified": "2026-08-22",
+      "maintainer": null,
+      "notes": "Listed in the community awesome-mcp-servers aggregator; repository URL taken verbatim from that list, not individually re-fetched for this edition."
+    },
+    {
+      "id": "airtable-domdomegg",
+      "name": "Airtable (domdomegg)",
+      "category": "data-db",
+      "transport": null,
+      "description": "Airtable database integration with schema inspection, read and write capabilities",
+      "authRequired": null,
+      "authNotes": null,
+      "repoUrl": "https://github.com/domdomegg/airtable-mcp-server",
+      "packageUrl": null,
+      "sourceDirectory": [
+        "glama"
+      ],
+      "sourceUrl": [
+        "https://github.com/punkpeye/awesome-mcp-servers"
+      ],
+      "dateVerified": "2026-08-22",
+      "maintainer": null,
+      "notes": "Listed in the community awesome-mcp-servers aggregator; repository URL taken verbatim from that list, not individually re-fetched for this edition."
+    },
+    {
+      "id": "airtable-rashidazarang",
+      "name": "Airtable (rashidazarang)",
+      "category": "data-db",
+      "transport": null,
+      "description": "Connect AI tools directly to Airtable. Query, create, update, and delete records using natural language. Features include base management, table operations, schema manipulation, record filtering, and data migration through a standardized MCP interface.",
+      "authRequired": null,
+      "authNotes": null,
+      "repoUrl": "https://github.com/rashidazarang/airtable-mcp",
+      "packageUrl": null,
+      "sourceDirectory": [
+        "glama"
+      ],
+      "sourceUrl": [
+        "https://github.com/punkpeye/awesome-mcp-servers"
+      ],
+      "dateVerified": "2026-08-22",
+      "maintainer": null,
+      "notes": "Listed in the community awesome-mcp-servers aggregator; repository URL taken verbatim from that list, not individually re-fetched for this edition."
+    },
+    {
+      "id": "aws-kb-retrieval",
+      "name": "AWS KB Retrieval",
+      "category": "data-db",
+      "transport": "stdio",
+      "description": "Retrieval from an AWS Knowledge Base using Bedrock Agent Runtime.",
+      "authRequired": true,
+      "authNotes": "AWS credentials required.",
+      "repoUrl": "https://github.com/modelcontextprotocol/servers-archived/tree/main/src/aws-kb-retrieval-server",
+      "packageUrl": null,
+      "sourceDirectory": [
+        "official-registry"
+      ],
+      "sourceUrl": [
+        "https://github.com/modelcontextprotocol/servers-archived/tree/main/src/aws-kb-retrieval-server"
+      ],
+      "dateVerified": "2026-08-22",
+      "maintainer": "Anthropic / MCP steering group (archived)",
+      "notes": "Archived reference server: moved out of the actively-maintained modelcontextprotocol/servers repo into servers-archived. Kept here for completeness; treat as unmaintained/reference-only."
+    },
+    {
+      "id": "atlassian-official",
+      "name": "Atlassian (official)",
+      "category": "productivity",
+      "transport": "streamable-http",
+      "description": "Atlassian's official remote MCP server: securely connects Jira, Confluence, Jira Service Management, Bitbucket, and Compass via OAuth 2.1 or API tokens.",
+      "authRequired": true,
+      "authNotes": "OAuth 2.1 login or Atlassian API token.",
+      "repoUrl": "https://github.com/atlassian/atlassian-mcp-server",
+      "packageUrl": null,
+      "sourceDirectory": [
+        "official-registry"
+      ],
+      "sourceUrl": [
+        "https://github.com/atlassian/atlassian-mcp-server",
+        "https://www.atlassian.com/platform/remote-mcp-server"
+      ],
+      "dateVerified": "2026-08-22",
+      "maintainer": "Atlassian",
+      "notes": "Reached general availability February 2026 per Atlassian's own announcement; Claude was the first official client partner."
+    },
+    {
+      "id": "attendance-engine-arifur9993",
+      "name": "Attendance Engine (arifur9993)",
+      "category": "productivity",
+      "transport": null,
+      "description": "Workforce attendance, overtime, overnight shifts, rotating rosters, and California wage-and-hour compliance (Labor Code \u00a7\u00a7 226.7, 512; Donohue v. AMN). 8 tools backed by @attendance-engine/core \u2014 a...",
+      "authRequired": null,
+      "authNotes": null,
+      "repoUrl": "https://github.com/arifur9993/attendance-engine-mcp",
+      "packageUrl": null,
+      "sourceDirectory": [
+        "glama"
+      ],
+      "sourceUrl": [
+        "https://github.com/punkpeye/awesome-mcp-servers"
+      ],
+      "dateVerified": "2026-08-22",
+      "maintainer": null,
+      "notes": "Listed in the community awesome-mcp-servers aggregator; repository URL taken verbatim from that list, not individually re-fetched for this edition."
+    },
+    {
+      "id": "docmost-local-wisflux",
+      "name": "Docmost Local (wisflux)",
+      "category": "productivity",
+      "transport": null,
+      "description": "MCP server for self-hosted Docmost (an open-source Notion/Confluence alternative). Read and write spaces, pages, comments, and members from Claude, Cursor, or VS Code. Works on the free Community Edition. npx -y...",
+      "authRequired": null,
+      "authNotes": null,
+      "repoUrl": "https://github.com/wisflux/docmost-local-mcp",
+      "packageUrl": null,
+      "sourceDirectory": [
+        "glama"
+      ],
+      "sourceUrl": [
+        "https://github.com/punkpeye/awesome-mcp-servers"
+      ],
+      "dateVerified": "2026-08-22",
+      "maintainer": null,
+      "notes": "Listed in the community awesome-mcp-servers aggregator; repository URL taken verbatim from that list, not individually re-fetched for this edition."
+    },
+    {
+      "id": "cloudflare-open-source-multi-server-suite",
+      "name": "Cloudflare (open-source multi-server suite)",
+      "category": "devops-cloud",
+      "transport": null,
+      "description": "Integration with Cloudflare services including Workers, KV, R2, and D1",
+      "authRequired": null,
+      "authNotes": null,
+      "repoUrl": "https://github.com/cloudflare/mcp-server-cloudflare",
+      "packageUrl": null,
+      "sourceDirectory": [
+        "glama"
+      ],
+      "sourceUrl": [
+        "https://github.com/punkpeye/awesome-mcp-servers"
+      ],
+      "dateVerified": "2026-08-22",
+      "maintainer": null,
+      "notes": "Listed in the community awesome-mcp-servers aggregator; repository URL taken verbatim from that list, not individually re-fetched for this edition."
+    },
+    {
+      "id": "grafana-official",
+      "name": "Grafana (official)",
+      "category": "devops-cloud",
+      "transport": null,
+      "description": "Search dashboards, investigate incidents and query datasources in your Grafana instance",
+      "authRequired": null,
+      "authNotes": null,
+      "repoUrl": "https://github.com/grafana/mcp-grafana",
+      "packageUrl": null,
+      "sourceDirectory": [
+        "glama",
+        "pulsemcp"
+      ],
+      "sourceUrl": [
+        "https://github.com/punkpeye/awesome-mcp-servers",
+        "https://www.pulsemcp.com/servers/grafana"
+      ],
+      "dateVerified": "2026-08-22",
+      "maintainer": null,
+      "notes": "Listed in the community awesome-mcp-servers aggregator; repository URL taken verbatim from that list, not individually re-fetched for this edition. Also listed on PulseMCP's server directory."
+    },
+    {
+      "id": "redis-cloud-official",
+      "name": "Redis Cloud (official)",
+      "category": "devops-cloud",
+      "transport": null,
+      "description": "Manage your Redis Cloud resources effortlessly using natural language. Create databases, monitor subscriptions, and configure cloud deployments with simple commands.",
+      "authRequired": null,
+      "authNotes": null,
+      "repoUrl": "https://github.com/redis/mcp-redis-cloud",
+      "packageUrl": null,
+      "sourceDirectory": [
+        "glama"
+      ],
+      "sourceUrl": [
+        "https://github.com/punkpeye/awesome-mcp-servers"
+      ],
+      "dateVerified": "2026-08-22",
+      "maintainer": null,
+      "notes": "Listed in the community awesome-mcp-servers aggregator; repository URL taken verbatim from that list, not individually re-fetched for this edition."
+    },
+    {
+      "id": "discord-saseq",
+      "name": "Discord (SaseQ)",
+      "category": "communication",
+      "transport": null,
+      "description": "A MCP server for the Discord integration. Enable your AI assistants to seamlessly interact with Discord. Enhance your Discord experience with powerful automation capabilities.",
+      "authRequired": null,
+      "authNotes": null,
+      "repoUrl": "https://github.com/SaseQ/discord-mcp",
+      "packageUrl": null,
+      "sourceDirectory": [
+        "glama"
+      ],
+      "sourceUrl": [
+        "https://github.com/punkpeye/awesome-mcp-servers"
+      ],
+      "dateVerified": "2026-08-22",
+      "maintainer": null,
+      "notes": "Listed in the community awesome-mcp-servers aggregator; repository URL taken verbatim from that list, not individually re-fetched for this edition."
+    },
+    {
+      "id": "linkedin-server-abhineet34",
+      "name": "LINKEDIN Server (abhineet34)",
+      "category": "communication",
+      "transport": null,
+      "description": "Local LinkedIn MCP server for posting to LinkedIn from Claude. 9 tools \u2014 create/edit/delete posts (text, image, article), upload images, fetch profile, look up company pages, and check follower counts. Uses the official LinkedIn REST API with OAuth 2.0...",
+      "authRequired": null,
+      "authNotes": null,
+      "repoUrl": "https://github.com/abhineet34/linkedin-mcp-server",
+      "packageUrl": null,
+      "sourceDirectory": [
+        "glama"
+      ],
+      "sourceUrl": [
+        "https://github.com/punkpeye/awesome-mcp-servers"
+      ],
+      "dateVerified": "2026-08-22",
+      "maintainer": null,
+      "notes": "Listed in the community awesome-mcp-servers aggregator; repository URL taken verbatim from that list, not individually re-fetched for this edition."
+    },
+    {
+      "id": "aetherwave-aetherwave-studio",
+      "name": "Aetherwave (AetherWave-Studio)",
+      "category": "media",
+      "transport": null,
+      "description": "One tool surface for music, image, video, and audio generation across Suno, Grok Imagine, Seedance, Kling, Hailuo, Wan, VEO, Ideogram, and GPT Image 2. Generate, edit, upscale, reframe, and master through one API key and one credit pool. First key includes...",
+      "authRequired": null,
+      "authNotes": null,
+      "repoUrl": "https://github.com/AetherWave-Studio/aetherwave-mcp",
+      "packageUrl": null,
+      "sourceDirectory": [
+        "glama"
+      ],
+      "sourceUrl": [
+        "https://github.com/punkpeye/awesome-mcp-servers"
+      ],
+      "dateVerified": "2026-08-22",
+      "maintainer": null,
+      "notes": "Listed in the community awesome-mcp-servers aggregator; repository URL taken verbatim from that list, not individually re-fetched for this edition."
+    },
+    {
+      "id": "after-effects-a-y-ibrahim",
+      "name": "After Effects (a-y-ibrahim)",
+      "category": "media",
+      "transport": null,
+      "description": "Control Adobe After Effects from any MCP client: arbitrary ExtendScript, background rendering, deep comp/layer inspection, and first-class Arabic/RTL & multilingual support (works on AE in any UI language). 47 tools.",
+      "authRequired": null,
+      "authNotes": null,
+      "repoUrl": "https://github.com/a-y-ibrahim/after-effects-mcp",
+      "packageUrl": null,
+      "sourceDirectory": [
+        "glama"
+      ],
+      "sourceUrl": [
+        "https://github.com/punkpeye/awesome-mcp-servers"
+      ],
+      "dateVerified": "2026-08-22",
+      "maintainer": null,
+      "notes": "Listed in the community awesome-mcp-servers aggregator; repository URL taken verbatim from that list, not individually re-fetched for this edition."
+    },
+    {
+      "id": "brainiall-server-fasuizu-br",
+      "name": "Brainiall Server (fasuizu-br)",
+      "category": "ai-ml",
+      "transport": null,
+      "description": "AI-powered speech tools: pronunciation assessment with phoneme-level feedback, speech-to-text with language detection, and text-to-speech with multiple voices.",
+      "authRequired": null,
+      "authNotes": null,
+      "repoUrl": "https://github.com/fasuizu-br/brainiall-mcp-server",
+      "packageUrl": null,
+      "sourceDirectory": [
+        "glama"
+      ],
+      "sourceUrl": [
+        "https://github.com/punkpeye/awesome-mcp-servers"
+      ],
+      "dateVerified": "2026-08-22",
+      "maintainer": null,
+      "notes": "Listed in the community awesome-mcp-servers aggregator; repository URL taken verbatim from that list, not individually re-fetched for this edition."
+    },
+    {
+      "id": "charted-marzukia",
+      "name": "Charted (marzukia)",
+      "category": "ai-ml",
+      "transport": null,
+      "description": "Zero-dependency chart server that renders bar, line, pie, scatter, and more from JSON or CSV to SVG, HTML, PNG, or data URL. Built-in themes; PNG output renders inline in chat. Install via uvx --from charted[mcp] charted-mcp.",
+      "authRequired": null,
+      "authNotes": null,
+      "repoUrl": "https://github.com/marzukia/charted",
+      "packageUrl": null,
+      "sourceDirectory": [
+        "glama"
+      ],
+      "sourceUrl": [
+        "https://github.com/punkpeye/awesome-mcp-servers"
+      ],
+      "dateVerified": "2026-08-22",
+      "maintainer": null,
+      "notes": "Listed in the community awesome-mcp-servers aggregator; repository URL taken verbatim from that list, not individually re-fetched for this edition."
+    },
+    {
+      "id": "apify-rag-web-browser-official",
+      "name": "Apify RAG Web Browser (official)",
+      "category": "search-web",
+      "transport": null,
+      "description": "An MCP server for Apify's open-source RAG Web Browser Actor to perform web searches, scrape URLs, and return content in Markdown.",
+      "authRequired": null,
+      "authNotes": null,
+      "repoUrl": "https://github.com/apify/mcp-server-rag-web-browser",
+      "packageUrl": null,
+      "sourceDirectory": [
+        "glama"
+      ],
+      "sourceUrl": [
+        "https://github.com/punkpeye/awesome-mcp-servers"
+      ],
+      "dateVerified": "2026-08-22",
+      "maintainer": null,
+      "notes": "Listed in the community awesome-mcp-servers aggregator; repository URL taken verbatim from that list, not individually re-fetched for this edition."
+    },
+    {
+      "id": "benchclaw-integrations-agnuxo1",
+      "name": "Benchclaw Integrations (Agnuxo1)",
+      "category": "search-web",
+      "transport": null,
+      "description": "Register LLMs/agents and submit research papers (Markdown) to the BenchClaw leaderboard. Papers are scored by a 17-judge Tribunal with 8 deception detectors across 10 dimensions. No API key required. Works with...",
+      "authRequired": null,
+      "authNotes": null,
+      "repoUrl": "https://github.com/Agnuxo1/benchclaw-integrations/tree/main/mcp-server",
+      "packageUrl": null,
+      "sourceDirectory": [
+        "glama"
+      ],
+      "sourceUrl": [
+        "https://github.com/punkpeye/awesome-mcp-servers"
+      ],
+      "dateVerified": "2026-08-22",
+      "maintainer": null,
+      "notes": "Listed in the community awesome-mcp-servers aggregator; repository URL taken verbatim from that list, not individually re-fetched for this edition."
+    },
+    {
+      "id": "agent-central-agentcentral-to",
+      "name": "Agent Central (agentcentral-to)",
+      "category": "finance",
+      "transport": null,
+      "description": "Hosted Amazon Seller Central and Amazon Ads MCP server for Claude, ChatGPT, and other AI clients, exposing inventory, orders, catalog, finance, fulfillment, and advertising data through a remote MCP endpoint.",
+      "authRequired": null,
+      "authNotes": null,
+      "repoUrl": "https://github.com/agentcentral-to/agent-central-mcp",
+      "packageUrl": null,
+      "sourceDirectory": [
+        "glama"
+      ],
+      "sourceUrl": [
+        "https://github.com/punkpeye/awesome-mcp-servers"
+      ],
+      "dateVerified": "2026-08-22",
+      "maintainer": null,
+      "notes": "Listed in the community awesome-mcp-servers aggregator; repository URL taken verbatim from that list, not individually re-fetched for this edition."
+    },
+    {
+      "id": "browserbase-official",
+      "name": "Browserbase (official)",
+      "category": "browser-automation",
+      "transport": null,
+      "description": "Automate browser interactions in the cloud (e.g. web navigation, data extraction, form filling, and more)",
+      "authRequired": null,
+      "authNotes": null,
+      "repoUrl": "https://github.com/browserbase/mcp-server-browserbase",
+      "packageUrl": null,
+      "sourceDirectory": [
+        "glama"
+      ],
+      "sourceUrl": [
+        "https://github.com/punkpeye/awesome-mcp-servers"
+      ],
+      "dateVerified": "2026-08-22",
+      "maintainer": null,
+      "notes": "Listed in the community awesome-mcp-servers aggregator; repository URL taken verbatim from that list, not individually re-fetched for this edition."
+    },
+    {
+      "id": "basescope-chasdaddy",
+      "name": "Basescope (chasdaddy)",
+      "category": "security",
+      "transport": null,
+      "description": "The read-only safety layer for onchain AI agents. 13 read-only tools on Base + EVM: token/contract safety (honeypot & rug-pull checks cross-referenced across GoPlus + honeypot.is), risky-approval detection, verified-source lookup, balances, ENS +...",
+      "authRequired": null,
+      "authNotes": null,
+      "repoUrl": "https://github.com/chasdaddy/basescope",
+      "packageUrl": null,
+      "sourceDirectory": [
+        "glama"
+      ],
+      "sourceUrl": [
+        "https://github.com/punkpeye/awesome-mcp-servers"
+      ],
+      "dateVerified": "2026-08-22",
+      "maintainer": null,
+      "notes": "Listed in the community awesome-mcp-servers aggregator; repository URL taken verbatim from that list, not individually re-fetched for this edition."
+    },
+    {
+      "id": "filesystem",
+      "name": "Filesystem",
+      "category": "file-storage",
+      "transport": "stdio",
+      "description": "Secure local file operations with configurable directory access controls.",
+      "authRequired": false,
+      "authNotes": null,
+      "repoUrl": "https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem",
+      "packageUrl": null,
+      "sourceDirectory": [
+        "official-registry",
+        "pulsemcp"
+      ],
+      "sourceUrl": [
+        "https://github.com/modelcontextprotocol/servers",
+        "https://www.pulsemcp.com/servers/modelcontextprotocol-filesystem"
+      ],
+      "dateVerified": "2026-08-22",
+      "maintainer": "Anthropic / MCP steering group",
+      "notes": "One of the 7 actively-maintained reference servers in the official modelcontextprotocol/servers repo. Also listed on PulseMCP's server directory."
+    },
+    {
+      "id": "memory",
+      "name": "Memory",
+      "category": "knowledge-memory",
+      "transport": "stdio",
+      "description": "Knowledge-graph-based persistent memory system for agents.",
+      "authRequired": false,
+      "authNotes": null,
+      "repoUrl": "https://github.com/modelcontextprotocol/servers/tree/main/src/memory",
+      "packageUrl": null,
+      "sourceDirectory": [
+        "official-registry",
+        "pulsemcp"
+      ],
+      "sourceUrl": [
+        "https://github.com/modelcontextprotocol/servers",
+        "https://www.pulsemcp.com/servers/modelcontextprotocol-memory"
+      ],
+      "dateVerified": "2026-08-22",
+      "maintainer": "Anthropic / MCP steering group",
+      "notes": "One of the 7 actively-maintained reference servers in the official modelcontextprotocol/servers repo. Also listed on PulseMCP's server directory."
+    }
+  ]
+}
