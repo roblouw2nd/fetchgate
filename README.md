@@ -20,6 +20,8 @@ Curated, honestly-sourced digital products for people building AI agents. Buy by
 card on Gumroad, or machine-to-machine via x402 at `GET /v1/buy/:id`. **Free
 samples** of each are in [`samples/`](./samples) — try before you buy.
 
+> 💎 **Best value: [Agent-Builder Bundle](https://growthchief5.gumroad.com/l/agent-builder-bundle) — all 5 for $99** (save $42 vs. $141 separately).
+
 | Product | What it is | Price | Sample |
 | --- | --- | --- | --- |
 | [MCP Server Registry Snapshot](https://growthchief5.gumroad.com/l/mcp-registry) | 400 MCP servers, cross-referenced across 5 directories | $19 | [samples/mcp-registry](./samples/mcp-registry) |
