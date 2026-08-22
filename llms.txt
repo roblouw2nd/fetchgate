@@ -1,0 +1,47 @@
+# Fetchgate
+
+> Web-content API for AI agents: fetch any URL and get clean Markdown or
+> structured metadata back, server-side, with boilerplate (scripts, nav,
+> ads) stripped out.
+
+Base URL: https://fetchgate.dev
+
+This is placeholder text pending final copy.
+
+## Endpoints
+
+- GET https://fetchgate.dev/v1/read?url=<url>
+  Fetches the URL, strips scripts/styles/nav/ads, converts the main content
+  to Markdown. Returns JSON { url, title, markdown, fetchedAt } by default.
+  Add &format=text to get raw Markdown back with a text/markdown content type.
+
+- GET https://fetchgate.dev/v1/meta?url=<url>
+  Fetches the URL and returns JSON metadata: title, description, canonical
+  URL, OpenGraph/Twitter card fields, favicon URL, language, and
+  published/modified timestamps when present.
+
+- GET https://fetchgate.dev/openapi.json
+  Full OpenAPI 3.1 specification for this API.
+
+- POST https://fetchgate.dev/mcp
+  Model Context Protocol server (Streamable HTTP transport, JSON-RPC 2.0):
+  initialize, tools/list, tools/call. Exposes four tools: read_url and
+  get_metadata (same free tier and x402 pricing as /v1/read and /v1/meta
+  above), list_products (wraps /v1/products), and get_purchase_info
+  (explains the /v1/buy/:id x402 purchase flow for a given product id).
+  Send header MCP-Protocol-Version: 2025-06-18 on requests after
+  initialize. GET /mcp returns 405 (no server-initiated SSE stream).
+
+## Access
+
+Free tier: 30 requests/day per IP address, no signup required.
+
+Authenticated / paid access: send "Authorization: Bearer <api-key>".
+Pay-per-request via the x402 protocol is planned; when live it will be
+advertised via HTTP 402 responses once the free tier is exhausted.
+
+## Notes for agents
+
+- Only http:// and https:// URLs are accepted.
+- Requests to private, loopback, and internal-network hosts are rejected.
+- Responses are capped at ~2MB; redirect chains are capped at 3 hops.
