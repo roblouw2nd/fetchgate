@@ -74,6 +74,14 @@ transfer, and the request succeeds. No signup, no API key, no stored card.
 
 See [`examples/`](./examples): [curl](./examples/curl.sh), [Python client](./examples/python_client.py), and [MCP client](./examples/mcp-client.md).
 
+## How it's built
+
+[`ARCHITECTURE.md`](./ARCHITECTURE.md) — the x402 flow in detail, why the
+payment layer is hand-rolled instead of using the official SDK, the
+signed-download-URL-as-receipt pattern, how MCP shares one authorization
+path with the plain HTTP routes, and the honest caveats (no chargebacks,
+facilitator trust, thin real x402 volume industry-wide).
+
 ## Endpoints
 
 | Endpoint | Purpose |
