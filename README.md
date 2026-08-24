@@ -80,6 +80,7 @@ See [`examples/`](./examples): [curl](./examples/curl.sh), [Python client](./exa
 - [x402 Integration Guide: The Mistakes That Silently Break It](./content/x402-integration-guide.md)
 - [The x402 Facilitator Landscape in 2026: 21 Options Compared](./content/x402-facilitator-landscape-2026.md)
 - [MCP Tool Poisoning: How a Tool Description Becomes an Attack](./content/mcp-tool-poisoning.md)
+- [How to Build an LLM Eval Harness That Catches Regressions Before Your Users Do](./content/llm-eval-harness-guide.md)
 - [Prompt-Injection Defense Checklist](./content/prompt-injection-defense-checklist.md)
 
 ## How it's built
