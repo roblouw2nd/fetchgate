@@ -20,12 +20,13 @@ Curated, honestly-sourced digital products for people building AI agents. Buy by
 card on Gumroad, or machine-to-machine via x402 at `GET /v1/buy/:id`. **Free
 samples** of each are in [`samples/`](./samples) — try before you buy.
 
-> 💎 **Best value: [Agent-Builder Bundle](https://growthchief5.gumroad.com/l/agent-builder-bundle) — all 5 for $99** (save $42 vs. $141 separately).
+> 💎 **Best value: [Fetchgate Complete Bundle](https://growthchief5.gumroad.com/l/agent-builder-bundle) — all 6 for $109** (save $39 vs. $148 separately).
 
 | Product | What it is | Price | Sample |
 | --- | --- | --- | --- |
-| [MCP Server Registry Snapshot](https://growthchief5.gumroad.com/l/mcp-registry) | 400 MCP servers, cross-referenced across 5 directories | $19 | [samples/mcp-registry](./samples/mcp-registry) |
+| [x402 Quickstart Kit](https://growthchief5.gumroad.com/l/x402-quickstart) | Seller + buyer x402 reference code, TS + Python | $7 | [samples/x402-quickstart](./samples/x402-quickstart) |
 | [x402 Services & Facilitator Registry](https://growthchief5.gumroad.com/l/x402-registry) | 21 facilitators + 118 x402-payable services | $15 | [samples/x402-registry](./samples/x402-registry) |
+| [MCP Server Registry Snapshot](https://growthchief5.gumroad.com/l/mcp-registry) | 400 MCP servers, cross-referenced across 5 directories | $19 | [samples/mcp-registry](./samples/mcp-registry) |
 | [Prompt-Injection & Tool-Hijack Test Corpus](https://growthchief5.gumroad.com/l/injection-corpus) | 156 labeled adversarial test cases + Python harness | $29 | [samples/injection-corpus](./samples/injection-corpus) |
 | [Prompt-Injection Defenses Playbook](https://growthchief5.gumroad.com/l/injection-defenses) | 6-layer playbook + 84 detection rules + scanner | $39 | [samples/injection-defenses](./samples/injection-defenses) |
 | [Agent Eval Harness Templates](https://growthchief5.gumroad.com/l/eval-harness) | 40-case eval kit, LLM-as-judge scorer, CLI runner | $39 | [samples/eval-harness](./samples/eval-harness) |
@@ -73,6 +74,13 @@ transfer, and the request succeeds. No signup, no API key, no stored card.
 ## Examples
 
 See [`examples/`](./examples): [curl](./examples/curl.sh), [Python client](./examples/python_client.py), and [MCP client](./examples/mcp-client.md).
+
+## Articles
+
+- [x402 Integration Guide: The Mistakes That Silently Break It](./content/x402-integration-guide.md)
+- [The x402 Facilitator Landscape in 2026: 21 Options Compared](./content/x402-facilitator-landscape-2026.md)
+- [MCP Tool Poisoning: How a Tool Description Becomes an Attack](./content/mcp-tool-poisoning.md)
+- [Prompt-Injection Defense Checklist](./content/prompt-injection-defense-checklist.md)
 
 ## How it's built
 
