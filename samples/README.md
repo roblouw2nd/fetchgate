@@ -5,13 +5,19 @@ well-documented, honestly-scoped products for people building AI agents —
 curated registries, eval tooling, and security test/defense kits. One-time
 purchase per product, no subscriptions, no invented data.
 
-This directory has **free, small samples of all 5 paid products** — real
+This directory has **free, small samples of all 6 paid products** — real
 data and real code pulled straight from each product, just a lot less of
 it. Each sample is a genuine subset, not a mockup: every entry is copied
 verbatim from the actual paid product, so what you see here is exactly
 what you'd get more of in the full version.
 
-## The 5 samples
+## The 6 samples
+
+### [x402-quickstart/](x402-quickstart/) — x402 Quickstart Kit
+The full `seller/` package (TypeScript, Cloudflare Workers/Hono) from the
+x402 buyer+seller reference code kit — read the actual signing/verification
+code before buying.
+[Full kit — $7](https://growthchief5.gumroad.com/l/x402-quickstart)
 
 ### [x402-registry/](x402-registry/) — x402 Services & Facilitator Registry
 5 of 21 facilitators + 10 of 118 x402-payable services from the x402

@@ -1,0 +1,21 @@
+{
+  "name": "x402-quickstart-seller",
+  "version": "1.0.0",
+  "description": "Dependency-free x402 seller-side payment middleware (protocol types, PaymentRequirements builder, facilitator verify/settle calls, Hono-compatible middleware) for Cloudflare Workers or any fetch-based runtime.",
+  "type": "module",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "license": "SEE-LICENSE-IN-README",
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^5.5.0"
+  },
+  "peerDependencies": {
+    "hono": ">=4"
+  },
+  "peerDependenciesMeta": {
+    "hono": {
+      "optional": true
+    }
+  }
+}
