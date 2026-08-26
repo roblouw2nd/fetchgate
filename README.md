@@ -77,6 +77,7 @@ See [`examples/`](./examples): [curl](./examples/curl.sh), [Python client](./exa
 
 ## Articles
 
+- [x402 vs. Stripe: When Machine-Payable APIs Actually Make Sense](./content/x402-vs-stripe.md)
 - [x402 Integration Guide: The Mistakes That Silently Break It](./content/x402-integration-guide.md)
 - [The x402 Facilitator Landscape in 2026: 21 Options Compared](./content/x402-facilitator-landscape-2026.md)
 - [MCP Tool Poisoning: How a Tool Description Becomes an Attack](./content/mcp-tool-poisoning.md)
