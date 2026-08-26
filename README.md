@@ -81,6 +81,7 @@ See [`examples/`](./examples): [curl](./examples/curl.sh), [Python client](./exa
 - [The x402 Facilitator Landscape in 2026: 21 Options Compared](./content/x402-facilitator-landscape-2026.md)
 - [MCP Tool Poisoning: How a Tool Description Becomes an Attack](./content/mcp-tool-poisoning.md)
 - [How to Build an LLM Eval Harness That Catches Regressions Before Your Users Do](./content/llm-eval-harness-guide.md)
+- [The MCP Server Registry: 400 Servers, Cross-Referenced Across 5 Directories](./content/mcp-server-registry-2026.md)
 - [Prompt-Injection Defense Checklist](./content/prompt-injection-defense-checklist.md)
 
 ## How it's built
