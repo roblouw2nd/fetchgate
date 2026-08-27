@@ -77,6 +77,7 @@ See [`examples/`](./examples): [curl](./examples/curl.sh), [Python client](./exa
 
 ## Articles
 
+- [60 Bots Crawl the Agent Web. Zero of Them Buy Anything.](./content/agent-web-crawler-census.md) — a first-hand census of every named crawler hitting a live x402 + MCP endpoint. Free dataset: [/tools/agent-census](https://fetchgate.dev/tools/agent-census)
 - [x402 vs. Stripe: When Machine-Payable APIs Actually Make Sense](./content/x402-vs-stripe.md)
 - [x402 Integration Guide: The Mistakes That Silently Break It](./content/x402-integration-guide.md)
 - [The x402 Facilitator Landscape in 2026: 21 Options Compared](./content/x402-facilitator-landscape-2026.md)
