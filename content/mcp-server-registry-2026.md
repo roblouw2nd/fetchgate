@@ -13,6 +13,8 @@ date: 2026-08-26
 
 # The MCP server registry: 400 servers, sorted by what's actually production-ready
 
+> Published at: https://fetchgate.dev/blog/mcp-server-registry-2026 — this GitHub copy is a mirror; the canonical page has product links, related articles and an RSS feed.
+
 Search "best MCP servers" and you'll find a dozen listicles, most of them one directory's raw feed with a headline on top. That's not a knock on any single directory — the official registry, Smithery, Glama, PulseMCP, and mcp.so are each doing real, useful curation work. It's a knock on treating any *one* of them as the answer. Different directories catch different servers, apply different verification bars, and go stale at different rates. A list built from one source inherits that one source's blind spots.
 
 Fetchgate's [MCP Server Registry Snapshot](https://growthchief5.gumroad.com/l/mcp-registry) exists because of what happens when you don't do that: cross-reference all five, keep the disagreements visible instead of picking a winner, and note per-entry which directory (or directories) actually list a server. The 2026-08-22 edition covers 400 servers this way. Here's what the cross-referencing itself reveals — independent of which servers made the list.
