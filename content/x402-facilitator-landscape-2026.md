@@ -13,6 +13,8 @@ date: 2026-08-24
 
 # The x402 facilitator landscape in 2026: 21 options compared
 
+> Published at: https://fetchgate.dev/blog/x402-facilitator-landscape-2026 — this GitHub copy is a mirror; the canonical page has product links, related articles and an RSS feed.
+
 Every x402 seller needs a facilitator — the third party that runs `/verify` and `/settle` against a buyer's signed payment so the seller never has to hold a private key or run an RPC client. The spec doesn't mandate one, which means "just use the facilitator" glosses over a real decision: 21 of them exist right now, with meaningfully different chain support, fee models, and — this is the part most guides skip — whether you can actually reach them without a signup step.
 
 This is a snapshot from Fetchgate's own [x402 Services & Facilitator Registry](https://growthchief5.gumroad.com/l/x402-registry) dataset, collected 2026-08-21 and reconciled against `facilitators.x402.watch`, the x402 GitHub org, and each facilitator's own docs where available. Full source list per entry is in the dataset; here's the shape of it.
