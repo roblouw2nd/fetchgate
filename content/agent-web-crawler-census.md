@@ -14,6 +14,8 @@ date: 2026-08-27
 
 # 60 bots crawl the agent web. Zero of them buy anything.
 
+> Published at: https://fetchgate.dev/blog/agent-web-crawler-census — this GitHub copy is a mirror; the canonical page has product links, related articles and an RSS feed.
+
 We built a machine-payable API, listed it in about thirty x402 and MCP directories, and waited to see who showed up.
 
 Plenty showed up. In a single 24-hour window, **6,309 requests from 187 distinct user agents**, of which **60 were named, self-identifying agent-web crawlers**. They discovered the endpoint, fetched its catalog, decoded its payment challenges, graded its trustworthiness, health-checked it on a schedule, and recorded its prices.
