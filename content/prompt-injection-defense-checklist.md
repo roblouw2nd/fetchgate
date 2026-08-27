@@ -13,6 +13,8 @@ date: 2026-08-23
 
 # A practical prompt-injection defense checklist for AI agents (with detection patterns)
 
+> Published at: https://fetchgate.dev/blog/prompt-injection-defense-checklist — this GitHub copy is a mirror; the canonical page has product links, related articles and an RSS feed.
+
 Every LLM application has the same structural problem: instructions and data arrive through the same channel, and the model has no reliable, built-in way to tell them apart. A retrieved web page, an email body, a tool's output, another agent's message — any of it can contain text shaped like an instruction, and "this is data, not a command" is a convention your application has to enforce. The model doesn't enforce it for you.
 
 That's the core finding behind OWASP's LLM01:2025 (Prompt Injection), and it's why this checklist doesn't promise a fix. There is no fully reliable, model-internal way to guarantee an embedded instruction gets ignored. What follows is defense-in-depth: layers cheap enough to stack, so a real attack has to clear several at once — and so when one gets through, you find out before serious damage is done.
