@@ -13,6 +13,8 @@ date: 2026-08-24
 
 # How to build an LLM eval harness that catches regressions before your users do
 
+> Published at: https://fetchgate.dev/blog/llm-eval-harness-guide — this GitHub copy is a mirror; the canonical page has product links, related articles and an RSS feed.
+
 The moment an agent or LLM-backed feature ships, you inherit a problem traditional testing doesn't have: the same input can produce a different, still-plausible-looking output tomorrow, because a model version changed, a prompt got tweaked, or a tool description shifted. Unit tests catch "this function throws." Nothing catches "this agent used to pick the right tool 98% of the time and now it's 84%" except an eval suite that actually runs regularly — and that suite needs a scorer that doesn't fool itself.
 
 This is a working structure for that: test-case format, scoring methods, and specifically the failure modes of LLM-as-judge scoring that make most homegrown eval setups produce false confidence instead of a real regression signal.
