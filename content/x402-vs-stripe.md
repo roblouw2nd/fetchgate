@@ -13,6 +13,8 @@ date: 2026-08-26
 
 # x402 vs. Stripe: when machine-payable APIs actually make sense
 
+> Published at: https://fetchgate.dev/blog/x402-vs-stripe — this GitHub copy is a mirror; the canonical page has product links, related articles and an RSS feed.
+
 "Why not just use Stripe?" is the first question any x402 pitch gets, and it deserves a real answer instead of a protocol-purity one. Stripe is mature, trusted, and handles subscriptions, refunds, disputes, and compliance better than a wallet-and-a-signature ever will. x402 doesn't compete with that. It exists for the price range Stripe's own fee structure makes structurally uneconomical — and the size of that range is bigger than most people building agent tooling in 2026 have priced out.
 
 ## The number that actually decides this: $0.30
