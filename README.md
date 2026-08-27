@@ -75,6 +75,12 @@ transfer, and the request succeeds. No signup, no API key, no stored card.
 
 See [`examples/`](./examples): [curl](./examples/curl.sh), [Python client](./examples/python_client.py), and [MCP client](./examples/mcp-client.md).
 
+## Free tools
+
+- **[MCP Tool Description Scanner](https://fetchgate.dev/tools/mcp-scanner)** — paste a remote MCP server URL; it fetches `tools/list` (never `tools/call`) and flags tool-poisoning patterns in every tool name, description, parameter description and the server's `initialize` instructions. JSON: `GET https://fetchgate.dev/v1/mcp-scan?url=<server>`. Also an MCP tool: `scan_mcp_server`.
+- **[Agent Web Crawler Census](https://fetchgate.dev/tools/agent-census)** — every named bot observed crawling a live x402 + MCP endpoint, with matchers and categories. CC BY 4.0 JSON at `/v1/agent-census.json`.
+- **[x402 Endpoint Inspector](https://fetchgate.dev/tools/x402-inspector)** — decode any URL's x402 payment challenge and see the mistakes that silently break signatures.
+
 ## Articles
 
 All articles live at [fetchgate.dev/blog](https://fetchgate.dev/blog) (RSS: [/blog/feed.xml](https://fetchgate.dev/blog/feed.xml)); the copies in [`content/`](./content) are mirrors.
