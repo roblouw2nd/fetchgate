@@ -13,6 +13,8 @@ date: 2026-08-27
 
 # ASCII smuggling and invisible Unicode: the prompt-injection technique your filters can't see
 
+> Published at: https://fetchgate.dev/blog/ascii-smuggling-invisible-unicode — this GitHub copy is a mirror; the canonical page has product links, related articles and an RSS feed.
+
 Most prompt-injection defenses start with a keyword filter: scan incoming text for phrases like "ignore previous instructions" and block or flag the match. It's cheap, it's fast, and it catches a meaningful share of unsophisticated attacks. It also has a structural blind spot that has nothing to do with how good the filter is written: if the attack text never contains the words the filter is looking for, there is nothing for the filter to match.
 
 That's the whole idea behind ASCII smuggling and invisible-Unicode injection, a technique popularized by security researcher Johann Rehberger and formalized in the broader encoding-obfuscation family of prompt-injection attacks. The instruction is real. The model reads it and can act on it. But the bytes a naive filter inspects contain no natural-language keyword at all, because the instruction was never written in plain, visible text to begin with.
