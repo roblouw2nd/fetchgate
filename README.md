@@ -77,15 +77,17 @@ See [`examples/`](./examples): [curl](./examples/curl.sh), [Python client](./exa
 
 ## Articles
 
-- [60 Bots Crawl the Agent Web. Zero of Them Buy Anything.](./content/agent-web-crawler-census.md) — a first-hand census of every named crawler hitting a live x402 + MCP endpoint. Free dataset: [/tools/agent-census](https://fetchgate.dev/tools/agent-census)
-- [x402 vs. Stripe: When Machine-Payable APIs Actually Make Sense](./content/x402-vs-stripe.md)
-- [x402 Integration Guide: The Mistakes That Silently Break It](./content/x402-integration-guide.md)
-- [The x402 Facilitator Landscape in 2026: 21 Options Compared](./content/x402-facilitator-landscape-2026.md)
-- [MCP Tool Poisoning: How a Tool Description Becomes an Attack](./content/mcp-tool-poisoning.md)
-- [How to Build an LLM Eval Harness That Catches Regressions Before Your Users Do](./content/llm-eval-harness-guide.md)
-- [The MCP Server Registry: 400 Servers, Cross-Referenced Across 5 Directories](./content/mcp-server-registry-2026.md)
-- [Prompt-Injection Defense Checklist](./content/prompt-injection-defense-checklist.md)
-- [ASCII Smuggling and Invisible Unicode: The Prompt-Injection Technique Your Filters Can't See](./content/ascii-smuggling-invisible-unicode.md)
+All articles live at [fetchgate.dev/blog](https://fetchgate.dev/blog) (RSS: [/blog/feed.xml](https://fetchgate.dev/blog/feed.xml)); the copies in [`content/`](./content) are mirrors.
+
+- [60 Bots Crawl the Agent Web. Zero of Them Buy Anything.](https://fetchgate.dev/blog/agent-web-crawler-census) — a first-hand census of every named crawler hitting a live x402 + MCP endpoint. Free dataset: [/tools/agent-census](https://fetchgate.dev/tools/agent-census)
+- [x402 vs. Stripe: When Machine-Payable APIs Actually Make Sense](https://fetchgate.dev/blog/x402-vs-stripe)
+- [x402 Integration Guide: The Mistakes That Silently Break It](https://fetchgate.dev/blog/x402-integration-guide)
+- [The x402 Facilitator Landscape in 2026: 21 Options Compared](https://fetchgate.dev/blog/x402-facilitator-landscape-2026)
+- [MCP Tool Poisoning: How a Tool Description Becomes an Attack](https://fetchgate.dev/blog/mcp-tool-poisoning)
+- [How to Build an LLM Eval Harness That Catches Regressions Before Your Users Do](https://fetchgate.dev/blog/llm-eval-harness-guide)
+- [The MCP Server Registry: 400 Servers, Cross-Referenced Across 5 Directories](https://fetchgate.dev/blog/mcp-server-registry-2026)
+- [Prompt-Injection Defense Checklist](https://fetchgate.dev/blog/prompt-injection-defense-checklist)
+- [ASCII Smuggling and Invisible Unicode: The Prompt-Injection Technique Your Filters Can't See](https://fetchgate.dev/blog/ascii-smuggling-invisible-unicode)
 
 ## How it's built
 
