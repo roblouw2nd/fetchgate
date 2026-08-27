@@ -84,6 +84,7 @@ See [`examples/`](./examples): [curl](./examples/curl.sh), [Python client](./exa
 - [How to Build an LLM Eval Harness That Catches Regressions Before Your Users Do](./content/llm-eval-harness-guide.md)
 - [The MCP Server Registry: 400 Servers, Cross-Referenced Across 5 Directories](./content/mcp-server-registry-2026.md)
 - [Prompt-Injection Defense Checklist](./content/prompt-injection-defense-checklist.md)
+- [ASCII Smuggling and Invisible Unicode: The Prompt-Injection Technique Your Filters Can't See](./content/ascii-smuggling-invisible-unicode.md)
 
 ## How it's built
 
