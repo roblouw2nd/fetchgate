@@ -13,6 +13,8 @@ date: 2026-08-23
 
 # Integrating x402 payments: a correct, copy-pasteable guide (with the mistakes that silently break it)
 
+> Published at: https://fetchgate.dev/blog/x402-integration-guide — this GitHub copy is a mirror; the canonical page has product links, related articles and an RSS feed.
+
 x402 revives the long-dormant HTTP `402 Payment Required` status code as a real payment handshake: a server responds `402` with machine-readable payment terms, a client signs an authorization and retries the same request with an `X-PAYMENT` header, and a third-party facilitator verifies and settles the transfer on-chain. No API keys, no account creation, no card processor — just a request, a signature, and a retry.
 
 The protocol itself is small. What trips people up is a handful of details that don't show up as errors — they show up as a signature that looks perfectly valid and gets silently rejected. This guide walks through a correct integration on both sides, then spends most of its time on those failure modes.
