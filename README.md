@@ -80,6 +80,7 @@ See [`examples/`](./examples): [curl](./examples/curl.sh), [Python client](./exa
 All articles live at [fetchgate.dev/blog](https://fetchgate.dev/blog) (RSS: [/blog/feed.xml](https://fetchgate.dev/blog/feed.xml)); the copies in [`content/`](./content) are mirrors.
 
 - [60 Bots Crawl the Agent Web. Zero of Them Buy Anything.](https://fetchgate.dev/blog/agent-web-crawler-census) — a first-hand census of every named crawler hitting a live x402 + MCP endpoint. Free dataset: [/tools/agent-census](https://fetchgate.dev/tools/agent-census)
+- [What EIP-3009 Actually Is, and Why x402 Uses It Instead of approve()](https://fetchgate.dev/blog/eip-3009-transfer-with-authorization)
 - [x402 vs. Stripe: When Machine-Payable APIs Actually Make Sense](https://fetchgate.dev/blog/x402-vs-stripe)
 - [x402 Integration Guide: The Mistakes That Silently Break It](https://fetchgate.dev/blog/x402-integration-guide)
 - [The x402 Facilitator Landscape in 2026: 21 Options Compared](https://fetchgate.dev/blog/x402-facilitator-landscape-2026)
