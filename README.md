@@ -94,6 +94,7 @@ All articles live at [fetchgate.dev/blog](https://fetchgate.dev/blog) (RSS: [/bl
 - [How to Build an LLM Eval Harness That Catches Regressions Before Your Users Do](https://fetchgate.dev/blog/llm-eval-harness-guide)
 - [The MCP Server Registry: 400 Servers, Cross-Referenced Across 5 Directories](https://fetchgate.dev/blog/mcp-server-registry-2026)
 - [Prompt-Injection Defense Checklist](https://fetchgate.dev/blog/prompt-injection-defense-checklist)
+- [Jailbreak Taxonomy 2026: 24 Framings, 5 Families, and What a Scorer Should Actually Check](https://fetchgate.dev/blog/jailbreak-taxonomy-2026)
 - [ASCII Smuggling and Invisible Unicode: The Prompt-Injection Technique Your Filters Can't See](https://fetchgate.dev/blog/ascii-smuggling-invisible-unicode)
 
 ## How it's built
