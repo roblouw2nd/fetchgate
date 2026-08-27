@@ -13,6 +13,8 @@ date: 2026-08-24
 
 # MCP tool poisoning: how a tool description becomes an attack, and how to stop it
 
+> Published at: https://fetchgate.dev/blog/mcp-tool-poisoning — this GitHub copy is a mirror; the canonical page has product links, related articles and an RSS feed.
+
 The MCP spec gives every tool a `description` field so an agent's planner knows what the tool does and when to call it. Nothing in the spec says that field has to be trustworthy. If a tool's description — or its return value — contains text shaped like an instruction, most agents will follow it, because the model can't reliably tell "metadata describing this tool" from "a command I should execute." OWASP catalogs this as **MCP03:2025 Tool Poisoning**, and it's one of the categories where a working proof-of-concept already exists, not just a theoretical risk.
 
 ## The proof-of-concept that started this: a calculator that steals an SSH key
