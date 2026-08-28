@@ -30,7 +30,7 @@ The whole thing is published free at [fetchgate.dev/tools/mcp-registry-audit](ht
 | Demanded auth (401/403) before `tools/list` | 3,617 | 23.6% |
 | Dead, broken, or not MCP (DNS failure, TLS error, 404, HTML, timeout…) | 3,477 | 22.7% |
 
-That 22.7% is the number to remember when someone quotes the registry's size. 609 URLs no longer resolve at all. 225 are templated placeholders (`https://{your-host}/mcp`) that were submitted verbatim. 143 answered `initialize` with HTTP 402 — x402-gated MCP servers, which is a genre now.
+That 22.7% is the number to remember when someone quotes the registry's size. 609 URLs no longer resolve at all. 225 are template URLs (`https://{host}/mcp`) with per-user `variables` — valid in the registry schema, but unreachable without configuration, so they count as not answering here. 143 answered `initialize` with HTTP 402 — x402-gated MCP servers, which is a genre now.
 
 The 8,235 that answered returned **140,284 tools**, every one of which we scored. Median 7 tools per server; one server returned 1,076.
 
