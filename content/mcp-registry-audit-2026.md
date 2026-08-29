@@ -109,6 +109,7 @@ The catch is the word "declare". A client that auto-approves calls on `readOnlyH
 
 - **Source:** all 837 pages of `registry.modelcontextprotocol.io/v0/servers` (83,603 version entries, 25,289 unique names), fetched 2026-08-27 22:31–23:02 UTC. Every `remotes[].url` across all versions: 15,329 unique URLs.
 - **Probe:** 2026-08-27 23:03 – 2026-08-28 00:18 UTC. Per URL: `initialize` (protocolVersion 2025-06-18, empty capabilities) → `notifications/initialized` → `tools/list`. 10-second timeout, one retry on transport-level failure only, up to 3 redirects, bodies capped at 4 MB, 8 workers, identifying User-Agent with a contact URL. **`tools/call` was never sent.**
+- **Denominator.** 15,329 URLs span every registry *version*, so a server that moved hosts leaves its dead old URL in the count. Restricted to latest-version URLs (14,357): 8,020 answered (55.9%), 3,500 gated (24.4%), 2,837 broken or not MCP (19.8%). Per latest server name (13,975 with a remote): 57.1% / 24.1% / 18.8%. The two-operator share is 29.4% either way.
 - **Unauthenticated.** 3,617 URLs answered 401/403. What they expose to an authenticated client is unknown to us.
 - **First page only.** Exactly one server paginated `tools/list`.
 - **Legacy SSE** transport was not implemented; 141 SSE-only URLs are recorded as skipped, not dead.
