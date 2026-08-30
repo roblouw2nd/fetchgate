@@ -7,7 +7,7 @@ ruleset plus a layered-defense playbook for hardening an agent or LLM
 application against prompt injection, tool hijacking, data exfiltration,
 system-prompt leaking, jailbreaks, and encoding-based obfuscation.
 
-**Free sample: 10 of the 84 detection rules** in the full ruleset, spread
+**Free sample: 10 of the 85 detection rules** in the full ruleset, spread
 across all 7 attack categories.
 
 - [**Get the full ruleset + playbook ($39)**](https://growthchief5.gumroad.com/l/injection-defenses)
@@ -16,7 +16,7 @@ across all 7 attack categories.
 
 - `rules/schema.json` — the full JSON Schema every detection rule
   validates against, copied verbatim from the full product.
-- `rules/detection-rules-sample.json` — 10 of the 84 rules in the full
+- `rules/detection-rules-sample.json` — 10 of the 85 rules in the full
   ruleset, copied verbatim, including each rule's honest
   `falsePositiveNotes` field (this ruleset is not sold as a magic filter
   — every rule documents what benign content can also trigger it):
@@ -39,7 +39,7 @@ pattern and `falsePositiveNotes`)
 
 ## Why it's small
 
-This is a teaser, not the product. The full ruleset has 84 rules across
+This is a teaser, not the product. The full ruleset has 85 rules across
 all 7 categories (regex, keyword, and named-heuristic based), plus
 `PLAYBOOK.md` (a structured threat model and six-layer defense taxonomy
 with concrete DO/DON'T guidance), `detector/scan.py` (a dependency-light
