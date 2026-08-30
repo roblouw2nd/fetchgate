@@ -1,5 +1,7 @@
 # Fetchgate
 
+[![MCP tool-description scan](https://fetchgate.dev/v1/scan-badge?url=https%3A%2F%2Ffetchgate.dev%2Fmcp)](https://fetchgate.dev/tools/mcp-scanner?url=https%3A%2F%2Ffetchgate.dev%2Fmcp)
+
 **A web-content API and machine-payable storefront for AI agents.** Fetch any
 URL as clean Markdown or structured metadata, and buy digital goods — all over
 plain HTTP or MCP, with a free tier or pay-per-call via [x402](https://www.x402.org)
