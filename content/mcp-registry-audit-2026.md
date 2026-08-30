@@ -46,7 +46,7 @@ This isn't a complaint about either operator — the registry allows it, and the
 | Demanded auth | 23.6% | **28.0%** | 0% |
 | Error | 17.4% | 20.2% | 2.3% |
 
-Their 2,413 URLs answer at 97.7%; for everyone else the registry answers at **45.5%**, not 54%. The auth row moves the other way for the same reason — neither operator gates anything — so authentication is more common among ordinary servers than the all-URLs figure suggests: closer to a third than a quarter. Recomputed from the same free per-URL file linked at the bottom of this article, by `add_deconcentrated.py` in the research directory.
+Their 2,413 URLs answer at 97.7%; for everyone else the registry answers at **45.5%**, not 54%. The auth row moves the other way for the same reason — neither operator gates anything — so authentication is more common among ordinary servers than the all-URLs figure suggests: closer to a third than a quarter. Recomputed from the same free per-URL file linked at the bottom of this article, by [`add_deconcentrated.py`](https://github.com/roblouw2nd/fetchgate/blob/main/research/mcp-registry-audit-2026-08-28/add_deconcentrated.py) — one pass, no other inputs.
 
 ## The textbook attack does not appear. Not once.
 
