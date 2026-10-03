@@ -1,7 +1,7 @@
 ---
-title: "We Ran an Unlisted Twin of Our MCP Server for 8 Days. It Got Zero Requests."
-seo_title: "Unlisted MCP Server Experiment: 0 Requests in 8 Days vs. 36,240 on the Listed Twin"
-meta_description: "A controlled experiment on agent-web discovery: an exact copy of a directory-listed MCP server, deployed on an unguessable host and never listed anywhere, received not one request in eight days while the listed original took 36,240. What that says about crawlers, monitors and where MCP traffic really comes from."
+title: "We Ran an Unlisted Twin of Our MCP Server for 35 Days. It Got Zero Requests."
+seo_title: "Unlisted MCP Server Experiment: 0 Requests in 35 Days vs. ~135,000 on the Listed Twin"
+meta_description: "A controlled experiment on agent-web discovery: an exact copy of a directory-listed MCP server, deployed on an unguessable host and never listed anywhere, received not one request in 35 days while the listed original took roughly 135,000. What that says about crawlers, monitors and where MCP traffic really comes from."
 keywords:
   - MCP server discovery
   - MCP registry crawlers
@@ -10,15 +10,38 @@ keywords:
   - MCP monitoring bots
   - x402 discovery
 date: 2026-09-06
+updated: 2026-10-03
 ---
 
-# We ran an unlisted twin of our MCP server for 8 days. It got zero requests.
+# We ran an unlisted twin of our MCP server for 35 days. It got zero requests.
 
 > Published at: https://fetchgate.dev/blog/unlisted-mcp-server-experiment — this GitHub copy is a mirror; the canonical page has product links, related articles and an RSS feed.
 
 When we published the [crawler census](https://fetchgate.dev/blog/agent-web-crawler-census) — 60 named bots hitting one directory-listed MCP + x402 endpoint, none of them buying anything — two readers on r/mcp asked the obvious follow-up questions. **Is all of that traffic really coming from the directory listings?** And **do the monitors learn from each other** — does a tool name published in one crawler's output end up being probed by another?
 
 Both are answerable with a control. So on 2026-08-29 we deployed one.
+
+## Update, 2026-10-03: still zero at 35 days
+
+We promised a 30-day read-out for 2026-09-28. It is five days late, which makes the window longer, not weaker. The answer has not moved:
+
+| Week | Listed server (requests, sampled) | Unlisted twin |
+| --- | ---: | ---: |
+| Aug 29 – Sep 4 | ~29,300 | 0 (+ our deploy-day smoke test) |
+| Sep 5 – Sep 11 | ~24,800 | 0 |
+| Sep 12 – Sep 18 | ~25,800 | 0 |
+| Sep 19 – Sep 25 | ~27,500 | 0 |
+| Sep 26 – Oct 2 | ~28,000 | 0 |
+| **35 days** | **~135,500** | **0** |
+
+- **The twin's request log still holds exactly the same five rows**: our own `curl` at 2026-08-29 20:37Z. No request of any kind in the 35 days since: no `GET /`, no `initialize`, no call to either of its unique tool names.
+- **The twin was up the whole time.** Cloudflare shows a single deployment, unchanged since 2026-08-29, and its per-day invocation count agrees with its own log: nothing after deploy day. "Zero" here is a server that was reachable and was not reached, not a server that was down.
+- **The hostname never leaked.** Before publishing this update we checked the site, sitemap, `llms.txt`, the RSS feed, the GitHub mirror and GitHub code search for it: no occurrences.
+- **The listed side kept growing.** Weekly volume is flat to rising (~25–28k), and the like-for-like `/mcp` slice is up: **1,772 requests from 85 distinct user agents** in the 24 hours ending 2026-10-03 19:53Z, against 1,664 from 60 at the 8-day mark. More crawlers found the listed server this month; none found the twin.
+
+So both conclusions below hold at 35 days, with more weight than at 8. The listings are still the whole discovery layer, and nothing that crawled the listed server went on to find its unlisted copy. Listed-server weekly figures come from Cloudflare's sampled `workersInvocationsAdaptive` dataset and are rounded. The twin's zero is exact: it comes from its own Analytics Engine log of every request.
+
+The original eight-day write-up follows unchanged, except for the limits section.
 
 ## The setup
 
@@ -70,7 +93,7 @@ Zero is a small number, and it makes a clean statement. Per-day, for the record:
 
 ## Honest limits
 
-- **One twin, eight days.** A longer window could see a first request; we will update this page at 30 days (2026-09-28) and keep the twin running.
+- **One twin, 35 days** (eight in the original write-up; see the update above). A longer window could still see a first request; the twin stays up, and if anything ever reaches it, this page will say so.
 - **"Unlisted" bundles several things.** A `workers.dev` hostname has no certificate-transparency entry of its own (it sits under a wildcard certificate), no DNS zone to walk, and no root page. A never-listed server on a custom domain would separate "not in a registry" from "not in CT logs". That variant is the natural next experiment.
 - **The listed server's request count is the whole Worker**, not just `/mcp`: it includes the site, the API, and the 402 challenges. The last-24h row (`/mcp` only, 1,664 requests, 60 user agents) is the like-for-like comparison, and the twin's zero holds against either.
 - **This measures crawlers, not humans.** A person who was sent the twin's URL would obviously reach it. Nobody was.
