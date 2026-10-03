@@ -11,11 +11,14 @@ keywords:
   - Coinbase x402
   - agentic commerce
 date: 2026-08-28
+updated: 2026-10-04
 ---
 
 # Coinbase's x402 Bazaar lists 14,820 paid APIs. Its own counters say the whole market is about $314 a day.
 
 > Published at: https://fetchgate.dev/blog/x402-bazaar-audit-2026 — this GitHub copy is a mirror; the canonical page has product links, related articles and an RSS feed.
+
+> **Update, 2026-10-04:** we re-ran this audit five weeks later. The index nearly doubled and 60% of these listings are gone: [The x402 Bazaar, five weeks on](https://fetchgate.dev/blog/x402-bazaar-october-2026). The numbers below are the August snapshot.
 
 Last week we published a [crawler census](https://fetchgate.dev/blog/agent-web-crawler-census) from one x402 endpoint's logs: sixty named bots discovered, graded and price-scraped it, and none of them ever paid. The obvious objection was that one endpoint is one endpoint. Fair. So we went and measured the whole market.
 
